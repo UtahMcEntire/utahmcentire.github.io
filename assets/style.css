@@ -273,6 +273,274 @@ body {
 }
 
 
+@media only screen and (max-device-width: 480px) {
+	body {
+		background-color: #EBEBEB;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		font-size: 30;
+		color: #EBEBEB;
+	}
+
+	.container{
+		width: 80%;
+		height: 100%;
+		margin-left: 15%;
+		background-color: #303030;
+		
+	}
+
+	.nav {
+		position: absolute;
+		display: inline-block;
+		left: 120px;
+		bottom: 0;
+		z-index: 100;
+		-webkit-animation: fadein 2s;
+		-webkit-animation-delay:1.7s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		width: 10%;
+	}
+
+	.nav a {
+		font-family: "Bahnschrift Light";
+		text-decoration: none;
+		font-family: "Helvetica";
+		font-weight: bold;
+		font-size: 20px;
+		width: 40px;
+		transition: transform ease 0.1s;
+		color: #EBEBEB;
+		padding: 0 13 0 2;
+	}
+
+	.nav br{
+		line-height: 10px;
+	}
+	.nav a:hover {
+		-webkit-animation: navshifton ease 0.2s;
+		animation-fill-mode: forwards;
+	}
+
+	.icons {
+		z-index: 1004;
+		position: absolute;
+		top: 10%;
+		right: 0;
+		color: #303030;
+		width: 15%;
+	}
+	.icons a {
+		color: #EBEBEB;
+		border: 1px solid #303030;
+		border-radius: 10%;
+	}
+
+	#navcont {
+		width: 100px;
+		background-color: #303030;
+		height: 1.50px;
+	}
+
+	@-webkit-keyframes navshifton { 
+		0% { 
+			padding-left: 2;
+		}
+		100% { 
+			padding-left: 15;
+			padding-right: 0;
+		} 
+	}
+
+	@-webkit-keyframes expandAnimation { 
+		0% { 
+			height: 00px;
+			width: 1%;
+		}
+		100% {
+			width: 1%;
+			height: 150%;
+		}
+	}
+
+
+	.bgbars {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		z-index: 0;
+		float: left;
+	}
+
+	.bbbars {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		z-index: 1004;
+	}
+
+	#bg1 {
+		animation: expandAnimation ease 2s;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+		background-color: #581845;
+		left: 0%;
+	}
+	#bg2 {
+		animation: expandAnimation ease 2s;
+		animation-delay: 1.1s;
+		animation-fill-mode: forwards;
+		background-color: #900C3F;
+		left: 1%;
+	}
+	#bg3 {
+		animation: expandAnimation ease 2s;
+		animation-delay: 1.2s;
+		animation-fill-mode: forwards;
+		background-color: #C70039;
+		left: 2%;
+	}
+	#bg4 {
+		animation: expandAnimation ease 2s;
+		animation-delay: 1.3s;
+		animation-fill-mode: forwards;
+		background-color: #FF5733;
+		left: 3%;
+	}
+	#bg5 {
+		animation: expandAnimation ease 2s;
+		animation-delay: 1.4s;
+		animation-fill-mode: forwards;
+		background-color: #FFC300;
+		left: 4%;
+	}
+
+	#bb1 {
+		width: 1%;
+		background-color: #EBEBEB;
+		right: 5%;
+	}
+	#bb2 {
+		width: 0.8%;
+		background-color: #EBEBEB;
+		right: 6%;
+	}
+	#bb3 {
+		width: 0.6%;
+		background-color: #EBEBEB;
+		right: 7%;
+	}
+	#bb4 {
+		width: 0.4%;
+		background-color: #EBEBEB;
+		right: 8%;
+	}
+	#bb5 {
+		width: 0.2%;
+		background-color: #EBEBEB;
+		right: 9%;
+	}
+
+	.pages {
+		display: inline-block;
+		z-index: 10;
+		left: 20%;
+		margin-left: 0px;
+		position: relative;
+		height: 100%;
+		width: calc(100% - 200px);
+		float: left;
+		text-align: left;
+		overflow: hidden;
+		-webkit-animation: fadein 2s;
+		-webkit-animation-delay: 0.2s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+	}
+
+	@-webkit-keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+
+	#intro {
+		font-family: "Bahnschrift Light";
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		z-index: 0;
+	}
+
+	#intro span	{
+		display: inline-block;
+		font-size: 2vw;
+		line-height: 80%;
+		height: 10vw;
+		max-height: 8%;
+		width: 100%;
+		margin-left: 0px;
+		padding-left: 50px;
+		top: 0;
+		color: #EBEBEB;
+		background-color: #303030;
+		
+	}
+
+	#about {
+		padding: 100px;
+	}
+
+	#resume {
+		padding: 100px;
+	}
+
+	#projects {
+		padding: 100px;
+	}
+
+	#contact {
+		padding: 100px;
+	}
+
+	#ovaltext {
+		z-index: 1003;
+		position: absolute;
+		background-color: #303030;
+		font-family: "Bahnschrift Light";
+		font-size: 2vw;
+		text-align: center;
+		line-height: 1.6;
+		border: 3px solid #EBEBEB;
+		top: 5%;
+		left: 5%;
+		max-width: 30%;
+		min-width: 250px;
+	}
+
+	#text {
+		z-index: 1003;
+		position: absolute;
+		background-color: #303030;
+		font-family: "Bahnschrift Light";
+		font-size: 1vw;
+		text-align: justify;
+		margin-top: 15%;
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 55%;
+		height: 100%;
+	}
+
+	#text a {
+		color: white;
+	}	
+}
+
+
 
 
 
