@@ -273,7 +273,7 @@ body {
 }
 
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 720px) {
 	body {
 		background-color: #EBEBEB;
 		margin: 0;
