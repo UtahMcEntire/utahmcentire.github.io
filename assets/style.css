@@ -69,7 +69,7 @@ table {
 
 .container form input {
 	height: 0;
-	margin: 13px 0; /* distance between buttons vertically */
+	margin: 15px 0; /* distance between buttons vertically */
 	z-index: 1;
 }
 
@@ -82,7 +82,7 @@ table {
 	content: "";
 	position: absolute;
 	display: inline-block;
-	width: 40px;
+	width: 40px;		/* size of cubes */
 	height: 40px;
 	border: 2px solid white;
 	border-radius: 0;
@@ -111,6 +111,7 @@ table {
 	left: 60px; /* distance from left, active button */
 	text-shadow: 0 0 5px white;
 }
+
 .container form input:hover:after:not(label) {
 	opacity: 1;
 }
@@ -260,7 +261,7 @@ body a:hover {
 	width: 80%;
 	box-sizing: border-box;
 	padding: 0 110px;
-	margin-left: 150px;
+	margin-left: 200px;
 	padding-right: 200px;
 }
 
@@ -311,14 +312,10 @@ h1 { text-transform: uppercase; }
 	
 	.content {
 		width: 90%;
-		padding: 0 110px;
-		margin-left: 150px;
-		padding-right: 200px;
+		padding: 0 30px;
+		margin-left: 30px;
 	}
 	
-	.content table {	
-		width: 75vw;
-	}
 	
 	.container form .labels {
 		width: 18%;
@@ -334,10 +331,35 @@ h1 { text-transform: uppercase; }
 
 	.container form {
 		-webkit-justify-content: flex-start; /* mobile navigation at top */
+		left: 0px;
+	}
+	
+	.container form input {
+		margin: 3px 0; /* distance between buttons vertically */
 	}
 	
 	.container form input:after {
+		left: 6vw; /* distance from left, inactive buttons */
 		font-size: 6vw; /* font size of all nav buttons */
+	}
+	
+	.container form input:before {
+		width: 5vw;		/* size of cubes */
+		height: 5vw;
+		border: 1px solid white;
+	}
+		
+	.container form input:checked:after {
+		left: 8vw; /* distance from left, active button */
+	}
+	
+	
+	.content table {
+		font-size: 15px;
+	}
+	
+	.devicon {
+		font-size: 2rem;
 	}
 }
 
