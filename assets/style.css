@@ -289,13 +289,22 @@ h1 { text-transform: uppercase; }
 	opacity: 1;
 }
 
-.contacttable {
-    opacity: 1;
+#contacttable {
+    display: table;
+}
+
+#mobilecontacttable {
+	display: none;
 }
 @media only screen and (max-device-width: 720px) {
-	.contacttable {
-		opacity: 0;
+	#contacttable {
+		display: none;
 	}
+	
+	#mobilecontacttable {
+		display: table;
+	}
+	
 	.vl {
 		opacity: 0;
 	}
@@ -325,6 +334,10 @@ h1 { text-transform: uppercase; }
 
 	.container form {
 		-webkit-justify-content: flex-start; /* mobile navigation at top */
+	}
+	
+	.container form input:after {
+		font-size: 6vw; /* font size of all nav buttons */
 	}
 }
 
