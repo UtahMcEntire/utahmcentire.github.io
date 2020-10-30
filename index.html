@@ -6,63 +6,161 @@
 		<link rel="stylesheet" href="assets/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Tinos' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 		<script src="assets/script.js"></script>
 </head>
 
 
 <body>
-<div class="bgbars" id="bg1"></div>
-<div class="bgbars" id="bg2"></div>
-<div class="bgbars" id="bg3"></div>
-<div class="bgbars" id="bg4"></div>
-<div class="bgbars" id="bg5"></div>
 <div class="container">
+<div class="vl"></div>
+<div class="background-div"></div>
+	<form>
+	<input type="radio" id="Slide1" name="slider" title="&nbsp;home"  checked="checked"/><br>
+	<input type="radio" id="Slide2" name="slider" title="&nbsp;about"/><br>
+	<input type="radio" id="Slide3" name="slider" title="&nbsp;skills"/><br>
+	<input type="radio" id="Slide4" name="slider" title="&nbsp;projects"/><br>
+	<input type="radio" id="Slide5" name="slider" title="&nbsp;contact"/>
+	<div class="labels">
 	
-
-	<div class="bbbars" id="bb1"></div>
-	<div class="bbbars" id="bb2"></div>
-	<div class="bbbars" id="bb3"></div>
-	<div class="bbbars" id="bb4"></div>
-	<div class="bbbars" id="bb5"></div>
-<!--
-	<div class="nav">
-		<div id="navcont"><a href="index.html">&nbsp;ABOUT&nbsp;</a></div><br>
-		<div id="navcont"><a href="https://www.linkedin.com/in/utahmcentire/">&nbsp;LINKEDIN&nbsp;</a></div><br>
-		<div id="navcont"><a href="https://github.com/UtahMcEntire">&nbsp;GITHUB&nbsp;</a></div><br>
-	</div>
--->
-
-	<div class="pages" id="intro">
-		<span><b>UTAH MCENTIRE</b></span>
-		
-		<div id="ovaltext"><center>&nbsp;&nbsp;<em>WEB / SOFTWARE DEV</em>&nbsp;&nbsp;</center></div>
-		<div class="icons">
-			<a href="https://github.com/UtahMcEntire"><i class="fa fa-github" aria-hidden="true"></i></a>
-			<a href="https://www.linkedin.com/in/utahmcentire/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+	<label for="Slide1" id="Slide1" class="Slide">
+		<div class="content">
+			<h1>Hello, I'm Utah</h1>
+			<br>
+			<p>Full Stack Web & Software Developer</p>
 		</div>
+	</label>
+
+	<label for="Slide2" id="Slide2" class="Slide">
+		<div class="content">
+			<table>
+				<tr>
+					
+					<td style="vertical-align: middle; padding: 20px;">
+						<br>
+						<div id="profilepic"><img src="assets/me.jpg" style="width: 20%; border-radius: 20%; margin-right: 50px; float: left;"></div>
+						<h1>Utah McEntire</h1><br>
+						<p>Nashville, TN</p><br>
+						<p>Software Developer</p><br>
+						<p>B.S. in Computer Science</p><br>
+						<p>U.S. Navy Veteran</p>
+						<p>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: justify">
+						<br><br>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						I'm currently a senior at MTSU working towards a Bachelor's of Science 
+						in Computer Science, on track to graduate in 2021. I'm most knowledgeable 
+						in C/C++, but I'm also familiar with Python, PHP, JavaScript, HTML, and 
+						CSS. In 2016 finished a 5-year enlistment in the US Navy stationed in Pearl 
+						Harbor as an Electronics Technician. The majority of my time was spent 
+						maintaining and troubleshooting external long-range communication systems 
+						onboard USS Hopper. I have extensive knowledge in electronic theory, advanced 
+						troubleshooting methods, and gained leadership experience during my service 
+						as well. I look forward to furthering my career in technology and connecting 
+						with the people in it.</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</label>
+	  
+	<label for="Slide3" id="Slide3" class="Slide">
+		<div class="content">
+			<h1>Lang:</h1><br>
+				<table>
+					<tr>
+						<td>&nbsp;<i class="devicon devicon-c-plain"></i>&nbsp;</td>
+						<td>&nbsp;<i class="devicon devicon-cplusplus-plain"></i>&nbsp;</td>
+						<td>&nbsp;<i class="devicon devicon-python-plain"></i>&nbsp;</td>
+						<td>&nbsp;<i class="devicon devicon-javascript-plain"></i>&nbsp;</td>
+						<td>&nbsp;<i class="devicon devicon-html5-plain"></i>&nbsp;</td>
+						<td>&nbsp;<i class="devicon devicon-css3-plain"></i>&nbsp;</td>
+					</tr>
+				</table>
+			<br><br><br>
+			<h1>Tech:</h1><br>
+			<table>
+				<tr>
+					<td>&nbsp;<i class="devicon devicon-git-plain"></i>&nbsp;</td>
+					<td>&nbsp;<i class="devicon devicon-linux-plain"></i>&nbsp;</td>
+					<td>&nbsp;<i class="devicon devicon-atom-plain"></i>&nbsp;</td>
+					<td>&nbsp;<i class="devicon devicon-visualstudio-plain"></i>&nbsp;</td>
+				</tr>
+			</table>
+			
+		</div>
+	</label>
+	  
+	<label for="Slide4" id="Slide4" class="Slide">
+		<div class="content">
+			<table>
+				<tr>
+					<tr><a href="https://github.com/UtahMcEntire/skeletonplusplus">Skeleton++</a></tr>
+				</tr>
+				<tr>
+					<td>C++</td>
+				</tr>
+				<tr>
+					<td>Windows program that writes the beginnings of a C++ program. It is able to set up
+					functions, parameters, classes, pass by reference/value, and libraries. All the user
+					has to do is write the function body.
+					<br><br><br><br>
+					</td>
+				</tr>
+				<tr>
+					<td><a href="https://jordanstickler.wordpress.com">JordanStickler.wordpress.com</a></td>
+				</tr>
+				<tr>
+					<td>Wordpress</td>
+				</tr>
+				<tr>
+					<td>A basic wordpress gallery for a commercial and children's book illustrator.
+					<br><br><br><br></td>
+				</tr>
+				<tr>
+					<td><a>um92.dev</a></td>
+				</tr>
+				<tr>
+					<td>HTML/CSS/JavaScript</td>
+				</tr>
+				<tr>
+					<td>This website!</td>
+				</tr>
+			</table>
+			
+		</div>
+	</label>
+	  
+	<label for="Slide5" id="Slide5" class="Slide">
+		<div class="content">
+		<table id="contacttable">
+		<tr>
+			<td style="width: 50px;"><h1><a href="https://linked.com/in/utahmcentire" style="font-size: 2rem;"><i class="fa fa-linkedin"></i></a></h1></td>
+			<td colspan="2"><p><a href="https://linked.com/in/utahmcentire" style="font-size: 2rem;">linkedin.com/in/utahmcentire</a></p></td><td></td>
+		</tr>
+		<tr>
+			<td><h1><a href="mailto:utahmcentire@gmail.com" style="font-size: 2rem;"><i class="fa fa-envelope"></i></a></h1></td>
+			<td style="width: 220px;"></td>
+			<td colspan="2"><p><a href="mailto:utahmcentire@gmail.com" style="font-size: 2rem;">utahmcentire@gmail.com</a></p></td>
+		</tr>
+		<tr>
+			<td><h1><a href="https://github.com/utahmcentire" style="font-size: 2rem;"><i class="fa fa-github"></i></a></h1></td>
+			<td colspan="2" style="text-align:right"><p><a href="https://github.com/utahmcentire" style="font-size: 2rem;">github.com/utahmcentire</a></p></td><td></td>
+		</tr>
+		<tr>
+			<td><h1><i class="fa fa-mobile" style="font-size: 3rem;"></i></h1></td>
+			<td></td><td></td><td><h1>(615) 618-5949</h1></td>
+		</tr>
+		</table>
+		</div>
+	</label>
+	  
 	</div>
-	
-	<div id="text">
-		I'm currently a sophomore at MTSU working towards a Bachelor's of Science in Computer Science, on track to graduate in 2021. I'm most knowledgeable in C/C++, but I'm also familiar with Python, PHP, JavaScript, HTML, and CSS. In 2016 finished a 5-year enlistment in the US Navy stationed in Pearl Harbor as an Electronics Technician. The majority of my time was spent maintaining and troubleshooting external long-range communication systems onboard USS Hopper. I have extensive knowledge in electronic theory, advanced troubleshooting methods, and gained leadership experience during my service as well. I look forward to furthering my career in technology and connecting with the people in it.
-		<br><br>
-		<a href="https://github.com/UtahMcEntire/skeletonplusplus">Skeleton++ Online is still in progress.<br>Click here for the GitHub repository.</a>
-	</div>
-	
-	<div class="pages" id="about">
-		<p>Ambitious former Navy sailor, looking to continue my software and web development career in the Middle Tennessee dev community. I’ve enjoyed my coding curriculum and would love to utilize an opportunity to learn new languages /technologies and apply my knowledge to real-world needs and applications.</p>
-	</div>
-	
-	<div class="pages" id="resume">
-		<p>suh</p>
-	</div>
-	
-	<div class="pages" id="projects">
-		<p>suh</p>
-	</div>
-	
-	<div class="pages" id="contact">
-		<p>suh</p>
-	</div>
+	</form>
+
 </div>
 </body>
 </html>
