@@ -197,6 +197,10 @@ table {
 	color: white !important;
 }
 
+#slide1 table {
+	width: 80%;
+}
+
 #slide2 {
 	color: white !important;
 }
@@ -209,8 +213,8 @@ table {
 	color: white !important;
 }
 
-#slide4 h1 a {
-	font-size: 32px;
+#slide4 table {
+	width: 80%;
 }
 
 #slide5 {
@@ -221,7 +225,7 @@ table {
 
 body {
 	font-family: "Open sans", sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 100;
 	color: white;
 }
@@ -277,15 +281,22 @@ body a:hover {
 
 .devicon {
 	font-size: 50px;
+	margin: 10px;
+	text-shadow: 0 0 3px white;
+}
+
+.fa {
+	margin: 10 10 0 0;
+	text-shadow: 0 0 2px white;
 }
 
 h1 { text-transform: uppercase; }
 
 .vl {
 	position: fixed;
-	border-left: 2px solid white;
+	border-left: 3px solid white;
 	height: 80%;
-	left: 270px;
+	left: 290px;
     box-shadow: 0 0 15px white;
 	opacity: 1;
 }
@@ -298,7 +309,20 @@ h1 { text-transform: uppercase; }
 	display: none;
 }
 
+#profilepic {
+	width: 30vw;
+}	
+
 @media only screen and (max-device-width: 720px) {
+	body p {
+		font-size: 14px;
+	}
+	
+	body a {
+		text-decoration: underline;
+		font-size: 14px
+	}
+	
 	#contacttable {
 		display: none;
 	}
@@ -357,11 +381,33 @@ h1 { text-transform: uppercase; }
 	
 	.content table {
 		font-size: 15px;
+		width: 80%;
 	}
 	
 	.devicon {
 		font-size: 2rem;
 	}
+
+	#slide1 table {
+		width: 300px;
+	}
+
+	#slide4 table {
+		width: 300px;
+	}
+	
+	#slide4 a {
+		font-size: 20px;
+	}
+	
+	.background-div {
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		opacity: 30%;
+	}
+	
 }
 
 
