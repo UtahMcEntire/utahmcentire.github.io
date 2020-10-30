@@ -297,6 +297,7 @@ h1 { text-transform: uppercase; }
 #mobilecontacttable {
 	display: none;
 }
+
 @media only screen and (max-device-width: 720px) {
 	#contacttable {
 		display: none;
