@@ -303,6 +303,22 @@ h1 { text-transform: uppercase; }
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-duration: 1.5s;
+	animation-fill-mode: both;
+}
+
+
+.hl {
+	position: fixed;
+	border-top: 3px solid white;
+	width: 50px;
+	left: 267px;
+    box-shadow: 0 0 15px white;
+	opacity: 0;
+	animation-name: animatehl;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+	animation-fill-mode: both;
 }
 
 @keyframes animatevl {
@@ -311,6 +327,15 @@ h1 { text-transform: uppercase; }
 	}
     100% {
 		80%;
+	}
+}
+
+@keyframes animatehl {
+    0% {
+		width: 0px;
+	}
+    100% {
+		width: 50px;
 	}
 }
 
@@ -345,6 +370,10 @@ h1 { text-transform: uppercase; }
 	}
 	
 	.vl {
+		opacity: 0;
+	}
+	
+	.hl {
 		opacity: 0;
 	}
 	
