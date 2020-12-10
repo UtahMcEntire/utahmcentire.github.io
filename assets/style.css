@@ -238,14 +238,14 @@ body {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: url(geo.gif);
+	background: black;
 	background-repeat: no-repeat;
 	background-size: 200% 100%;
-	-webkit-filter: blur(15px);
+	-webkit-filter: blur(2px);
 	-moz-filter: blur(15px);
 	-o-filter: blur(15px);
 	-ms-filter: blur(15px);
-	opacity: 20%;
+	opacity: 10%;
 }
 
 body h1 {
@@ -299,6 +299,19 @@ h1 { text-transform: uppercase; }
 	left: 290px;
     box-shadow: 0 0 15px white;
 	opacity: 1;
+	animation-name: animatevl;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+}
+
+@keyframes animatevl {
+    0% {
+		height: 0%;
+	}
+    100% {
+		80%;
+	}
 }
 
 #contacttable {
