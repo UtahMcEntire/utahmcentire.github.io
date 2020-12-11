@@ -5,7 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/style.css">
-		<link href='https://fonts.googleapis.com/css?family=Tinos' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/aes.css">
+		<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 		<script src="assets/script.js"></script>
@@ -13,24 +14,34 @@
 
 
 <body>
+
 <div class="container">
+<div class="logo">UM92.DEV</div>
+
 <div class="vl"></div>
+
+<div class="bl" style="right: 5%;"></div>
+<div class="bl" style="right: 10%;"></div>
+<div class="bl" style="right: 15%;"></div>
+<div class="bl" style="right: 20%;"></div>
+
 <div class="background-div"></div>
 	<form>
-	<input type="radio" id="Slide1" name="slider" title="&nbsp;home"  checked="checked"/><br>
-	<input type="radio" id="Slide2" name="slider" title="&nbsp;about"/><br>
-	<input type="radio" id="Slide3" name="slider" title="&nbsp;skills"/><br>
-	<input type="radio" id="Slide4" name="slider" title="&nbsp;projects"/><br>
-	<input type="radio" id="Slide5" name="slider" title="&nbsp;contact"/>
+	<input type="radio" id="Slide1" name="slider" title="home"  checked="checked"/><br>
+	<input type="radio" id="Slide2" name="slider" title="about"/><br>
+	<input type="radio" id="Slide3" name="slider" title="skills"/><br>
+	<input type="radio" id="Slide4" name="slider" title="projects"/><br>
+	<input type="radio" id="Slide5" name="slider" title="contact"/>
 	<div class="labels">
 	
 	<label for="Slide1" id="Slide1" class="Slide">
 		<div class="content">
-			<table><tr>
-					<td><h1>Hello<br>I'm Utah</h1></td>
+			<table>
+				<tr>
+					<td><h1>Hello, I'm&nbsp;Utah</h1></td>
 				</tr>
 				<tr>
-					<td><br>Full Stack Web & Software Developer</td>
+					<td><br><h3>Full&nbsp;Stack&nbsp;Web&nbsp;& Software&nbsp;Developer</h3></td>
 				</tr>
 			</table>
 		</div>
@@ -40,21 +51,22 @@
 		<div class="content">
 			<table>
 				<tr>
-					
 					<td style="vertical-align: middle; padding: 20px;">
-						<br><br><br><br>
+						<div class="mobileonly">
+							<br><br><br><br><br><br>
+						</div>
 						<div id="profilepic"><img src="assets/me.jpg" style="width: 30%; border-radius: 20%; margin-right: 10px; float: left;"></div>
 						
-						<p>Utah McEntire<br>
-						Nashville, TN<br>
+						<h3>Utah&nbsp;McEntire</h3>
+						<p>Nashville, TN<br>
 						Software Developer<br>
 						B.S. in Computer Science<br>
-						U.S. Navy Veteran</p>					
+						U.S. Navy Veteran</p>		
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<p style="font-family: Verdana, monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						I'm currently a senior at MTSU working towards a Bachelor's of Science 
 						in Computer Science, on track to graduate in 2021. I'm most knowledgeable 
 						in C/C++, but I'm also familiar with Python, PHP, JavaScript, HTML, and 
@@ -76,38 +88,40 @@
 	  
 	<label for="Slide3" id="Slide3" class="Slide">
 		<div class="content">
-			<p>Lang:</p><br>
-				<table style="text-align:center;">
-					<tr>
-						<td style="width:100px;"><i class="devicon devicon-c-plain"></i></td>
-						<td style="width:100px;"><i class="devicon devicon-cplusplus-plain"></i></td>
-						<td style="width:100px;"><i class="devicon devicon-python-plain"></i></td>
-						<td style="width:100px;"><i class="devicon devicon-javascript-plain"></i></td>
-						<td style="width:100px;"><i class="devicon devicon-html5-plain"></i></td>
-						<td style="width:100px;"><i class="devicon devicon-css3-plain"></i></td>
-					</tr>
-					<tr>
-						<td><br>C</td>
-						<td><br>C++</td>
-						<td><br>Python</td>
-						<td><br>JavaScript</td>
-						<td><br>HTML5</td>
-						<td><br>CSS3</td>
-					</tr>
-				</table>
-			<br><br><br>
-			<p>Tech:</p><br>
-			<table style="text-align:center">
+			<div class="mobileonly">
+				<br><br><br><br><br><br>
+			</div>
+			<h2>Lang:</h2><br>
+			<table style="text-align:center;">
 				<tr>
-					<td style="width:100px;"><i class="devicon devicon-git-plain"></i></td>
-					<td style="width:100px;"><i class="devicon devicon-linux-plain"></i></td>
-					<td style="width:100px;"><i class="devicon devicon-visualstudio-plain"></i></td>
+					<td style="width:100px;"><i class="devicon devicon-c-plain"><br><center><a style="color:#191919">C</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-cplusplus-plain"><br><center><a style="color:#191919">C++</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-python-plain"><br><center><a style="color:#191919">Python</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-javascript-plain"><br><center><a style="color:#191919">Java-Script</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-html5-plain"><br><center><a style="color:#191919">HTML5</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-css3-plain"><br><center><a style="color:#191919">CSS3</a></center></i></td>
 				</tr>
+				<!--<tr>
+					<td><br><a class="langlabel1" style="color:black">C</a></td>
+					<td class="langlabel2"><br>C++</td>
+					<td class="langlabel3"><br>Python</td>
+					<td class="langlabel4"><br>Java-Script</td>
+					<td class="langlabel5"><br>HTML5</td>
+					<td class="langlabel6"><br>CSS3</td>
+				</tr>-->
+			</table>
+			<h2>Tech:</h2><br>
+			<table style="text-align:center;">
 				<tr>
-					<td><br>Git/Github</td>
-					<td><br>Linux</td>
-					<td><br>Visual Studio</td>
+					<td style="width:100px;"><i class="devicon devicon-git-plain"><br><center><a style="color:#191919">Git</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-linux-plain"><br><center><a style="color:#191919">Linux</a></center></i></td>
+					<td style="width:100px;"><i class="devicon devicon-visualstudio-plain"><br><center><a style="color:#191919">Visual Studio</a></center></i></td>
 				</tr>
+				<!--<tr>
+					<td class="langlabel7"><br>Github</td>
+					<td class="langlabel8"><br>Linux</td>
+					<td class="langlabel9"><br>Visual Studio</td>
+				</tr>-->
 			</table>
 			
 		</div>
@@ -115,16 +129,18 @@
 	  
 	<label for="Slide4" id="Slide4" class="Slide">
 		<div class="content">
-		<br><br><br>
+			<div class="mobileonly">
+				<br><br><br><br><br>
+			</div>
 			<table>
 				<tr>
-					<tr><td style="padding: 0 10 5 0;"><a href="https://github.com/UtahMcEntire/skeletonplusplus" target="_blank">Skeleton++</a></td></tr>
+					<td><a href="https://github.com/UtahMcEntire/skeletonplusplus" target="_blank"><h3>Skeleton++</h3></a></td></tr>
 				</tr>
 				<tr>
-					<td style="padding: 5 5 0 5;">C++</td>
+					<td>C++</td>
 				</tr>
 				<tr>
-					<td style="padding: 5 5 0 5;">Windows program that writes the beginnings of a C++ program. It is able to set up
+					<td style="font-family: Verdana, monospace;">Windows program that writes the beginnings of a C++ program. It is able to set up
 					functions, parameters, classes, pass by reference/value, and libraries. All the user
 					has to do is write the function body.
 					<br>
@@ -133,24 +149,24 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 0 10 5 0;"><a href="https://jordanstickler.wordpress.com" target="_blank">JordanStickler.wordpress.com</a></td>
+					<td><a href="https://jordanstickler.wordpress.com" target="_blank"><h3>StringBean&nbsp;Illustrations</h3></a></td>
 				</tr>
 				<tr>
-					<td  style="padding: 5 5 0 5;">Wordpress</td>
+					<td>Wordpress</td>
 				</tr>
 				<tr>
-					<td  style="padding: 5 5 0 5;">A basic wordpress gallery for a commercial and children's book illustrator.
+					<td  style="font-family: Verdana, monospace;">A basic wordpress gallery for a commercial and children's book illustrator.
 					<br><br><br>
 					</td>
 				</tr>
 				<tr>
-					<td style="padding: 0 10 5 0;"><a>um92.dev</a></td>
+					<td><a><h3>um92.dev</h3></a></td>
 				</tr>
 				<tr>
-					<td  style="padding: 5 5 0 5;">HTML, CSS, JavaScript</td>
+					<td>HTML, CSS, JavaScript</td>
 				</tr>
 				<tr>
-					<td  style="padding: 5 5 0 5;">This website!</td>
+					<td style="font-family: Verdana, monospace;">This website!</td>
 				</tr>
 			</table>
 			
@@ -165,7 +181,7 @@
 					<h1><a href="https://linked.com/in/utahmcentire/" style="font-size: 2rem;" target="_blank"><i class="fa fa-linkedin"></i></a></h1>
 				</td>
 				<td colspan="2">
-					<p><a href="https://linkedin.com/in/utahmcentire/" style="font-size: 2rem;" target="_blank">linkedin.com/in/utahmcentire</a></p>
+					<p><a href="https://linked.com/in/utahmcentire/" style="font-size: 2rem;" target="_blank">linkedin.com/in/utahmcentire</a></p>
 				</td>
 				<td></td>
 			</tr>
@@ -202,22 +218,22 @@
 		<table id="mobilecontacttable">
 			<tr>
 				<td>
-					<br><a href="https://linkedin.com/in/utahmcentire/" style="font-size: 1rem;" target="_blank"><i class="fa fa-linkedin"></i><br>LinkedIn</a>
+					<br><a href="https://linkedin.com/in/utahmcentire/" style="font-size: 2rem;" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;LinkedIn</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<br><a href="mailto:utahmcentire@gmail.com" style="font-size: 1rem;" target="_blank"><i class="fa fa-envelope"></i><br>Gmail</a>
+					<br><a href="mailto:utahmcentire@gmail.com" style="font-size: 2rem;" target="_blank"><i class="fa fa-envelope"></i>&nbsp;Gmail</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<br><a href="https://github.com/utahmcentire" style="font-size: 1rem;" target="_blank"><i class="fa fa-github"></i><br>GitHub</a>
+					<br><a href="https://github.com/utahmcentire" style="font-size: 2rem;" target="_blank"><i class="fa fa-github"></i>&nbsp;GitHub</a>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<br><a href"tel:6156185949"><i class="fa fa-mobile" style="font-size: 3rem;" target="_blank"></i><br>(615) 618-5949</a>
+					<br><a href"tel:6156185949" style="font-size: 1.8rem;" target="_blank"><i class="fa fa-mobile" style="font-size: 2.5rem;"></i>&nbsp;(615) 618-5949</a>
 				</td>
 			</tr>
 		</table>
