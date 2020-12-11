@@ -13,10 +13,6 @@
 	text-align: right;
 	color: white;
 	animation: flicker 15s infinite;
-	z-index: 1;
-	&:hover {
-		opacity: 1;
-  }
 }
 
 @keyframes flicker {
