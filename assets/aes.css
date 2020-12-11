@@ -5,11 +5,11 @@
 }
 
 .logo {
-	height: 100%;
-	width: 100%;
+	position:absolute;
 	font-family: "Archivo", sans-serif;
 	font-size: 5vw;
 	top: 0px;
+	right: 0px;
 	text-align: right;
 	color: white;
 	animation: flicker 15s infinite;
