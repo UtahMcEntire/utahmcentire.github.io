@@ -33,12 +33,12 @@ body h1 {
 }
 
 body h2 {
-	font-size: 30px;
+	font-size: 28px;
 	margin-bottom: 5px;
 }
 
 body h3 {
-	font-size: 25px;
+	font-size: 26px;
 	margin-bottom: 5px;
 }
 
@@ -68,7 +68,7 @@ strong {
 	color: gold;
 }
 
-gold {
+hlt {
 	color: gold;
 }
 
@@ -320,6 +320,7 @@ table {
 	padding: 0 110px;
 	margin-left: 200px;
 	padding-right: 200px;
+	text-shadow: -10px 10px 10px black;
 }
 
 .content a, p, h1, h2, h3 {
@@ -367,6 +368,8 @@ table {
     box-shadow: 0 0 20px rgba(242, 243, 244, 1);
 	position: fixed;
 	display: table;
+	background: #f2f3f4;
+	left: -45px;
 	bottom: -45px;
 	border-radius: 50%;
 	width: 90px;
@@ -376,8 +379,8 @@ table {
 
 .wstylebutton:hover {
     box-shadow: 0 0 100px rgba(242, 243, 244, 1);
-	width: 100px;
-	height: 100px;
+	width: 125px;
+	height: 125px;
 	-webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;

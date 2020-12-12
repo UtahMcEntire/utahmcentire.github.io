@@ -4,21 +4,27 @@
 	<title>Utah McEntire - Online Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	
 	<link rel="stylesheet" href="assets/style.css">
+	
+	<link rel="stylesheet" type="text/css" title="dark" href="assets/style.css">
+	<link rel="alternate stylesheet" type="text/css" title="light" href="assets/white.css">
+
+	
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 	<script src="assets/script.js"></script>
 </head>
 
-<body>
+<body onload="set_style_from_cookie()">
 <div class="colorpicker">
-	<a href="#" onclick="changeCSS('assets/style.css', 0);">
-		<div class="bstylebutton" style="background: #212121; left: -45px;"></div>
+	<a href="#" onclick="switch_style('dark'); return false;" class="themes" id="dark">
+		<div class="bstylebutton"></div>
 	</a>
 	
-	<a href="#" onclick="changeCSS('assets/white.css', 0);">
-		<div class="wstylebutton" style="background: #f2f3f4; left: -45px;"></div>
+	<a href="#" onclick="switch_style('light'); return false;" class="themes" id="light">
+		<div class="wstylebutton"></div>
 	</a>
 </div>
 <div class="container">
@@ -36,7 +42,7 @@
 		<label for="Slide1" id="Slide1" class="Slide">
 			<div class="content">
 				<h1>Hello! I'm&nbsp;<strong>Utah</strong>.</h1></td>
-				<br><h2>I'm a <strong>full stack</strong> developer.</h2></td>
+				<br><h2>I'm a <strong>full&nbsp;stack</strong> developer.</h2></td>
 				<br><h3>I specialize in developing and deploying 
 					responsive websites and backend software.</h3></td>
 			</div>
@@ -63,10 +69,10 @@
 						<td style="margin: 0px">
 							<p style="font-family: Verdana, monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							I'm currently a senior at MTSU working towards a Bachelor's of Science 
-							in Computer Science, <gold>on track to graduate in 2021</gold>. I'm most knowledgeable 
-							in <gold>C/C++</gold>, but I'm also familiar with 
-							<gold>Python</gold>, <gold>PHP</gold>, <gold>JavaScript</gold>, <gold>HTML</gold>, and 
-							<gold>CSS</gold>.
+							in Computer Science, <gold>on track to graduate in 2021</hlt>. I'm most knowledgeable 
+							in <hlt>C/C++</hlt>, but I'm also familiar with 
+							<hlt>Python</hlt>, <hlt>PHP</hlt>, <hlt>JavaScript</hlt>, <hlt>HTML</hlt>, and 
+							<hlt>CSS</hlt>.
 							<br><br>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							In 2016 finished a 5-year enlistment in the US Navy stationed in Pearl 

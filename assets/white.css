@@ -28,18 +28,18 @@ body {
 body h1 {
 	font-size: 40px;
 	text-transform: uppercase;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 body h2 {
 	font-size: 28px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 body h3 {
 	font-size: 26px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 body a {
@@ -68,7 +68,7 @@ strong {
 	color: #ff471a;
 }
 
-red {
+hlt {
 	color: #ff471a;
 }
 
@@ -320,6 +320,7 @@ table {
 	padding: 0 110px;
 	margin-left: 200px;
 	padding-right: 200px;
+	text-shadow: -10px 10px 10px #404040;
 }
 
 .content a, p, h1, h2, h3 {
@@ -367,6 +368,8 @@ table {
     box-shadow: 0 0 20px rgba(33, 33, 33, 1);
 	position: fixed;
 	display: table;
+	background: #212121;
+	left: -45px;
 	bottom: -45px;
 	border-radius: 50%;
 	width: 90px;
@@ -375,9 +378,9 @@ table {
 }
 
 .bstylebutton:hover {
-    box-shadow: 0 0 50px rgba(33, 33, 33, 1);
-	width: 100px;
-	height: 100px;
+    box-shadow: 0 0 100px rgba(33, 33, 33, 1);
+	width: 125px;
+	height: 125px;
 	-webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
