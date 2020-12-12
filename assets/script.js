@@ -6,6 +6,7 @@
   ga('create', 'UA-46156385-1', 'cssscript.com');
   ga('send', 'pageview');
 
+/* replaces css file with chosen theme */
 function changeCSS(cssFile, cssLinkIndex) {
 
     var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);

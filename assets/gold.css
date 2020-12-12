@@ -1,6 +1,5 @@
 /* reset */
 
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -31,7 +30,75 @@ table {
 	border-spacing: 0;
 }
 
-/* main */
+body {
+	font-family: "Andale Mono", monospace;
+	font-weight: 100;
+	color: #212121;
+}
+
+body h1 {
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+body h2 {
+	font-size: 28px;
+	margin-bottom: 15px;
+}
+
+body h3 {
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+body a:hover {
+	color: #212121;
+	text-shadow: 0 0 6px #212121;
+	animation: fadeGlow ease-in-out 0.3s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+#slide1 {
+	color: #212121 !important;
+}
+
+#slide2 {
+	color: #212121 !important;
+}
+
+#slide3 {
+	color: #212121 !important;
+}
+
+#slide4 {
+	color: #212121 !important;
+}
+
+#slide5 {
+	color: #212121 !important;
+}
+
+#mobilecontacttable {
+	display: none;
+}
+
+#techBubble{
+	border: solid 2px #212121;
+	border-radius: 8px;
+	padding: 2px 5px;
+	margin: 2px 5px 2px 5px;
+}
+
+#techDesc {
+	font-family: Verdana, monospace;
+}
+
+#profilepic {
+	width: 30vw;
+}
 
 .container {
 	width: 100vw;
@@ -77,16 +144,7 @@ table {
 	z-index: 1000;
 	animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-     } 
+    animation-fill-mode: forwards; 
 }
 
 .container form input:checked {
@@ -100,11 +158,11 @@ table {
 	display: inline-block;
 	width: 35px;		/* size of cubes */
 	height: 35px;
-	border: 4px solid #212121;
+	border: 3px solid #212121;
 	border-radius: 0;
 	cursor: pointer;
-	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
+	-webkit-transition: all 0.25s linear;
 }
 
 .container form input:checked:before { background-color: #212121; }
@@ -114,13 +172,13 @@ table {
 	content: "" attr(title) "";
 	position: relative;
 	left: 55px; /* distance from left, inactive buttons */
-	opacity: 0.65;
+	opacity: 0.55;
 	color: #212121;
 	font-size: 35px; /* font size of all nav buttons */
 	display: block;
 	min-width: 80px;
-	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
+	-webkit-transition: all 0.25s linear;
 }
 
 .container form input:checked:after {
@@ -173,7 +231,7 @@ table {
 	animation: fadeInAnimation ease 2s;
 	animation-delay: 1s;
     animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -215,53 +273,30 @@ table {
 	transition: all 0.75s cubic-bezier(0.75, 0.25, 0, 1.05);
 }
 
-#slide1 {
-	color: #212121 !important;
-}
-
-#slide2 {
-	color: #212121 !important;
-}
-
-#slide3 {
-	color: #212121 !important;
-}
-
-#slide4 {
-	color: #212121 !important;
-}
-
-#slide5 {
-	color: #212121 !important;
-}
-
-body {
-	font-family: "Andale Mono", monospace;
-	font-size: 20px;
-	font-weight: 100;
+.logo {
+	position: absolute;
+	font-family: "Archivo", sans-serif;
+	font-size: 5vw;
+	top: 0px;
+	right: 0px;
+	width: 30%;
+	text-align: right;
 	color: #212121;
+	animation: flicker 15s infinite;
 }
 
-body h1 {
-	font-size: 40px;
-	text-transform: uppercase;
-}
-
-body h2 {
-	font-size: 28px;
-}
-
-body h3 {
-	font-size: 26px;
-}
-
-body a:hover {
-	color: gold;
-	background-color: #212121;
-}
-
-#profilepic {
-	width: 30vw;
+.vl {
+	position: fixed;
+	border-left: 3px solid #212121;
+	height: 80%;
+	left: 310px;
+    box-shadow: 0 0 15px #212121;
+	opacity: 1;
+	animation-name: animatevl;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+	animation-fill-mode: both;
 }
 
 .content {	/* most/all of the text in the slides */
@@ -274,16 +309,11 @@ body a:hover {
 
 .content a, p, h1, h2, h3 {
 	color: #212121;
-	padding: 10px;
-}
-
-.content a:hover{
-	color: gold;
-	background-color: #212121;
 }
 
 .devicon {
 	font-size: 50px;
+	padding: 10px;
 	margin: 10px;
 }
 
@@ -298,7 +328,9 @@ body a:hover {
 }
 
 .fa {
-	margin: 10 10 0 0;
+	font-size: 30px;
+	margin: 10px;
+	padding: 10px;
 }
 
 .fa:hover {
@@ -309,29 +341,6 @@ body a:hover {
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
-}
-
-.vl {
-	position: fixed;
-	border-left: 5px solid #212121;
-	height: 80%;
-	left: 310px;
-    box-shadow: 0 0 5px #212121;
-	opacity: 1;
-	animation-name: animatevl;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-duration: 1.5s;
-	animation-fill-mode: both;
-}
-
-@keyframes animatevl {
-    0% {
-		height: 0%;
-	}
-    100% {
-		80%;
-	}
 }
 
 .colorpicker{
@@ -357,6 +366,23 @@ body a:hover {
 	animation-fill-mode: both;
 }
 
+.mobileonly {
+	display: none;
+}
+
+.icontable {
+    display: block;
+	width: 100%;
+	font-size: 50px;
+	margin: 10px;
+	padding: 10px;
+}
+
+:root {
+  --shadow-color: #212121;
+  --shadow-color-light: #212121;
+}
+
 @keyframes cexpand {
     0% {
 		height: 30px;
@@ -366,179 +392,34 @@ body a:hover {
 	}
 }
 
-#contacttable {
-    display: table;
-}
-
-#mobilecontacttable {
-	display: none;
-}
-
-.mobileonly {
-	display: none;
-}
-
-@media only screen and (max-device-width: 720px) {
-	.mobileonly {
-		display: block;
+@keyframes animatevl {
+    0% {
+		height: 0%;
 	}
-	
-	body p {
-		font-size: 14px;
-	}
-	
-	body a {
-		text-decoration: underline;
-		font-size: 14px
-	}
-	
-	body h1 {
-		font-size: 30px;
-		text-transform: uppercase;
-	}
-	
-	body h3 {
-		font-size: 23px;
-	}
-	
-	#contacttable {
-		display: none;
-	}
-	
-	#mobilecontacttable {
-		width: 400px;
-		display: block;
-	}
-	
-	.vl {
-		opacity: 0;
-	}
-	
-	.content {
-		width: 90%;
-		padding: 0 30px;
-		margin-left: 30px;
-	}
-	
-	.container form .labels {
-		width: 18%;
-	}
-
-	.container form .labels label {
-		min-width: 18%;
-	}
-	
-	#profilepic {
-		width: 75vw;
-	}	
-
-	.container form {
-		-webkit-justify-content: flex-start; /* mobile navigation at top */
-		left: 0px;
-	}
-	
-	.container form input {
-		margin: 3px 0; /* distance between buttons vertically */
-	}
-	
-	.container form input:after {
-		left: 7vw; /* distance from left, inactive buttons */
-		font-size: 6vw; /* font size of all nav buttons */
-	}
-	
-	.container form input:before {
-		width: 5vw;		/* size of cubes */
-		height: 5vw;
-		border: 1px solid #212121;
-	}
-		
-	.container form input:checked:after {
-		left: 9vw; /* distance from left, active button */
-	}
-	
-	.content table {
-		font-size: 15px;
-		width: 80%;
-	}
-
-	.devicon {
-		font-size: 2rem;
-	}
-	
-	.devicon:hover {
-		text-shadow: 0 0 0px #212121;
-	}
-
-	.fa:hover {
-		text-shadow: 0 0 0px #212121;
+    100% {
+		height: 80%;
 	}
 }
 
-/* NEON LOGO BEGIN */
-:root {
-  --shadow-color: #212121;
-  --shadow-color-light: #212121;
+@keyframes fadeGlow { 
+	0% { 
+		text-shadow: 0 0 0px #212121; 
+	} 
+	100% { 
+		text-shadow: 0 0 6px #212121; 
+	} 
 }
 
-.logo {
-	position:absolute;
-	font-family: "Archivo", sans-serif;
-	font-size: 5vw;
-	top: 0px;
-	right: 0px;
-	text-align: right;
-	color: black;
-	animation: flicker 15s infinite;
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
 }
 
-@media only screen and (max-device-width: 720px) {
-	.logo {
-		font-size: 15vw;
-		top: 70%;
-		right: -30%;
-		animation: flickermobile 15s infinite;
-		transform: rotate(-90deg);
-
-		/* Safari */
-		-webkit-transform: rotate(-90deg);
-
-		/* Firefox */
-		-moz-transform: rotate(-90deg);
-
-		/* IE */
-		-ms-transform: rotate(-90deg);
-
-		/* Opera */
-		-o-transform: rotate(-90deg);
-
-		/* Internet Explorer */
-		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-	}
-	
-	
-	@keyframes flickermobile {
-		0% {
-			text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-			0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-			0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-			opacity: 0.1;
-		}
-		50% {
-			text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-			0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-			0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
-			opacity: 0.1;
-		}
-		100% {
-			text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-			0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-			0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-			opacity: 0.1;
-		}
-	}
-}
-
-@keyframes flicker {
+@keyframes flicker { /* Neon Logo */
 	0% {
 		text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
 		0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
@@ -639,5 +520,144 @@ body a:hover {
 		opacity: 0.8;
 	}
 }
-/* NEON LOGO END */
 
+@media only screen and (max-device-width: 720px) {
+	body p {
+		font-size: 14px;
+	}
+	
+	body a {
+		text-decoration: underline;
+	}
+	
+	body h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	body h2 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	body h3 {
+		font-size: 18px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	#profilepic {
+		width: 75vw;
+	}
+	
+	#techBubble{
+		border: solid 1px #212121;
+		border-radius: 8px;
+		padding: 2px 4px;
+		margin: 2px;
+		font-size: 12px;
+	}
+
+	#techDesc {
+		font-family: Verdana, monospace;
+		font-size: 12px;
+	}
+	
+	.vl {
+		opacity: 0;
+	}
+	
+	.content {
+		width: 80vw;
+		padding: 10px;
+		margin-left: 300px;
+	}
+	
+	.container form .labels {
+		width: 18%;
+	}
+
+	.container form .labels label {
+		min-width: 18%;
+	}
+
+	.container form {
+		-webkit-justify-content: flex-start; /* mobile navigation at top */
+		left: 0px;
+	}
+	
+	.container form input {
+		margin: 4px 0; /* distance between buttons vertically */
+	}
+	
+	.container form input:before {
+		width: 5vw;		/* size of cubes */
+		height: 5vw;
+		border: 2px solid #212121;
+	}
+	
+	.container form input:after {
+		left: 8vw; /* distance from left, inactive buttons */
+		font-size: 6vw; /* font size of all nav buttons */
+	}
+		
+	.container form input:checked:after {
+		left: 10vw; /* distance from left, active button */
+	}
+	
+	.devicon {
+		font-size: 2rem;
+		margin: 1px;
+		padding: 3px;
+	}
+	
+	.fa {
+		font-size: 2rem;
+		margin: 1px;
+		padding: 3px;
+	}
+	
+	.mobileonly {
+		display: block;
+	}
+	
+	.nomobile {
+		display: none;
+	}
+	
+	.icontable {
+		display: block;
+		font-size: 2rem;
+		margin: 1px;
+		padding: 3px;
+	}
+	
+	.logo {
+		text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+		0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+		0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+		opacity: 0.1;
+		font-size: 15vw;
+		top: 75%;
+		right: -10%;
+		transform: rotate(-90deg);
+		animation: none !important; /* disables animation on mobile for performance */
+
+		/* Safari */
+		-webkit-transform: rotate(-90deg);
+
+		/* Firefox */
+		-moz-transform: rotate(-90deg);
+
+		/* IE */
+		-ms-transform: rotate(-90deg);
+
+		/* Opera */
+		-o-transform: rotate(-90deg);
+
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+}
