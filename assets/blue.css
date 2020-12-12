@@ -14,7 +14,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
 	line-height: 1; 
-	background-color: #212121;
+	background-color: #000033;
 }
 
 ol, ul { list-style: none }
@@ -87,7 +87,7 @@ table {
     100% { 
         opacity: 1; 
      } 
-}
+} 
 
 .container form input:checked {
 	outline: 0;
@@ -98,8 +98,8 @@ table {
 	content: "";
 	position: absolute;
 	display: inline-block;
-	width: 35px;		/* size of cubes */
-	height: 35px;
+	width: 40px;		/* size of cubes */
+	height: 40px;
 	border: 2px solid #f2f3f4;
 	border-radius: 0;
 	cursor: pointer;
@@ -116,7 +116,7 @@ table {
 	left: 55px; /* distance from left, inactive buttons */
 	opacity: 0.15;
 	color: #f2f3f4;
-	font-size: 35px; /* font size of all nav buttons */
+	font-size: 40px; /* font size of all nav buttons */
 	display: block;
 	min-width: 80px;
 	transition: all 0.25s linear;
@@ -235,18 +235,6 @@ table {
 	color: #f2f3f4 !important;
 }
 
-#profilepic {
-	width: 30vw;
-}
-
-.content {	/* most/all of the text in the slides */
-	width: 80%;
-	box-sizing: border-box;
-	padding: 0 110px;
-	margin-left: 200px;
-	padding-right: 200px;
-}
-
 /* Fancy style */
 
 body {
@@ -259,51 +247,45 @@ body {
 body h1 {
 	font-size: 40px;
 	text-transform: uppercase;
-	margin-top: 15px;
-	margin-bottom: 15px;
 }
 
 body h2 {
 	font-size: 28px;
-	margin-bottom: 15px;
 }
 
 body h3 {
 	font-size: 26px;
-	margin-bottom: 15px;
 }
 
 body a:hover {
 	color: #f2f3f4;
-	text-shadow: 0 0 6px #f2f3f4;
-	animation: fadeGlow ease-in-out 0.3s;
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
+	text-shadow: 0 0 4px #f2f3f4;
 }
 
-@keyframes fadeGlow { 
-	0% { 
-		text-shadow: 0 0 0px #f2f3f4; 
-	} 
-	100% { 
-		text-shadow: 0 0 6px #f2f3f4; 
-	} 
+#profilepic {
+	width: 30vw;
+}
+
+.content {	/* most/all of the text in the slides */
+	width: 80%;
+	box-sizing: border-box;
+	padding: 0 110px;
+	margin-left: 200px;
+	padding-right: 200px;
 }
 
 .content a, p, h1, h2, h3 {
-	color: #f2f3f4;
+	color: #fffaf0;
+	text-decoration: none;
 }
 
 .devicon {
 	font-size: 50px;
-	padding: 10px;
 	margin: 10px;
 }
 
 .devicon:hover {
-	color: #212121;
-	background-color: #f2f3f4;
-	border-radius: 5px;
+	text-shadow: 0 0 3px #f2f3f4;
 	-webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
@@ -311,15 +293,11 @@ body a:hover {
 }
 
 .fa {
-	font-size: 50px;
-	margin: 10px;
-	padding: 10px;
+	margin: 10 10 0 0;
 }
 
 .fa:hover {
-	color: #212121;
-	border-radius: 5px;
-	background-color: #f2f3f4;
+	text-shadow: 0 0 2px #f2f3f4;
 	-webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
@@ -359,7 +337,7 @@ body a:hover {
 	display:table;
 	bottom: 0px;
 	border: none;
-	width: 34%;
+	width: 20%;
 	height: 30px;
 	z-index: 1001;
 }
@@ -383,13 +361,6 @@ body a:hover {
 
 #contacttable {
     display: table;
-	width: 100%;
-}
-
-#contacttable a {
-	font-size: 4rem;
-	margin: 5%;
-	padding: 0%;
 }
 
 #mobilecontacttable {
@@ -400,23 +371,9 @@ body a:hover {
 	display: none;
 }
 
-#techBubble{
-	border: solid 2px #f2f3f4;
-	border-radius: 8px;
-	padding: 5px;
-}
-
-#techDesc {
-	font-family: Verdana, monospace;
-}
-
 @media only screen and (max-device-width: 720px) {
 	.mobileonly {
 		display: block;
-	}
-	
-	.nomobile {
-		display: none;
 	}
 	
 	body p {
@@ -430,19 +387,10 @@ body a:hover {
 	body h1 {
 		font-size: 30px;
 		text-transform: uppercase;
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
-	
-	body h2 {
-		margin-top: 5px;
-		margin-bottom: 5px;
 	}
 	
 	body h3 {
-		font-size: 18px;
-		margin-top: 5px;
-		margin-bottom: 5px;
+		font-size: 23px;
 	}
 	
 	#contacttable {
@@ -452,20 +400,6 @@ body a:hover {
 	#mobilecontacttable {
 		width: 400px;
 		display: block;
-		margin: 5%;
-		padding: 0%;
-	}
-	
-	#techBubble{
-		border: solid 1px #f2f3f4;
-		border-radius: 8px;
-		padding: 1px;
-		font-size: 12px;
-	}
-
-	#techDesc {
-		font-family: Verdana, monospace;
-		font-size: 12px;
 	}
 	
 	.vl {
@@ -514,23 +448,21 @@ body a:hover {
 		left: 9vw; /* distance from left, active button */
 	}
 	
+	.content table {
+		font-size: 15px;
+		width: 80%;
+	}
+	
 	.devicon {
 		font-size: 2rem;
-		margin: 1px;
-		padding: 3px;
 	}
 	
 	.devicon:hover {
-		text-shadow: 0 0 0px #191919;
-	}
-	
-	.fa {
-		margin: 1px;
-		padding: 3px;
+		text-shadow: 0 0 0px #212121;
 	}
 
 	.fa:hover {
-		text-shadow: 0 0 0px #191919;
+		text-shadow: 0 0 0px #212121;
 	}
 }
 
@@ -546,7 +478,6 @@ body a:hover {
 	font-size: 5vw;
 	top: 0px;
 	right: 0px;
-	width: 30%;
 	text-align: right;
 	color: white;
 	animation: flicker 15s infinite;
@@ -557,6 +488,7 @@ body a:hover {
 		font-size: 15vw;
 		top: 70%;
 		right: -30%;
+		animation: flickermobile 15s infinite;
 		transform: rotate(-90deg);
 
 		/* Safari */
@@ -573,6 +505,28 @@ body a:hover {
 
 		/* Internet Explorer */
 		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+	
+	
+	@keyframes flickermobile {
+		0% {
+			text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+			0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+			0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+			opacity: 0.1;
+		}
+		50% {
+			text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+			0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+			0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+			opacity: 0.1;
+		}
+		100% {
+			text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+			0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+			0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+			opacity: 0.1;
+		}
 	}
 }
 
