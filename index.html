@@ -18,6 +18,9 @@
 </head>
 
 <body onload="set_style_from_cookie()">
+
+<div class="mobileonly horiz"></div>
+
 <div class="colorpicker">
 	<a href="#" onclick="switch_style('dark'); return false;" class="themes" id="dark">
 		<div class="bstylebutton"></div>
@@ -27,8 +30,9 @@
 		<div class="wstylebutton"></div>
 	</a>
 </div>
+
 <div class="container">
-<div class="logo">UM92.DEV</div>
+
 <div class="vl"></div>
 	<form>
 	<input class="nav" type="radio" id="Slide1" name="slider" title="home"  checked="checked"/><br>
@@ -36,15 +40,21 @@
 	<input class="nav" type="radio" id="Slide3" name="slider" title="skills"/><br>
 	<input class="nav" type="radio" id="Slide4" name="slider" title="projects"/><br>
 	<input class="nav" type="radio" id="Slide5" name="slider" title="contact"/>
-	
+
 	<div class="labels">
-		
 		<label for="Slide1" id="Slide1" class="Slide">
 			<div class="content">
-				<h1>Hello! I'm&nbsp;<strong>Utah</strong>.</h1></td>
-				<br><h2>I'm a <strong>full&nbsp;stack</strong> developer.</h2></td>
+				<h1>Hello! I'm&nbsp;<strong>Utah</strong>.</h1>
+				<br><h2>I'm a <strong>full&nbsp;stack</strong> developer.</h2>
 				<br><h3>I specialize in developing and deploying 
-					responsive websites and backend software.</h3></td>
+				responsive websites and backend software.</h3><br>
+				<a href="mailto:utahmcentire@gmail.com" class="button">
+					<bld><h3>./email</h3></bld>
+				</a>
+				&nbsp;
+				<a href="assets/resume2020.pdf" class="button">
+					<bld><h3>./résumé</h3></bld>
+				</a>
 			</div>
 		</label>
 
@@ -52,24 +62,21 @@
 			<div class="content">
 				<table>
 					<tr>
-						<td style="vertical-align: middle; padding: 20px;">
-							<div class="mobileonly">
-								<br><br><br><br><br>
+						<td style="vertical-align: middle; padding: 10px;">
+							<div id="profilepic">
+								<img src="assets/me.jpg" style="width: 32%; border-radius: 20%; margin-right: 10px; float: left;">
 							</div>
-							<div id="profilepic"><img src="assets/me.jpg" style="width: 30%; border-radius: 20%; margin-right: 10px; float: left;"></div>
-							
-							<h3 style="margin: 0px;"><strong>Utah&nbsp;McEntire</strong></h3>
+							<h3><strong>Utah&nbsp;McEntire</strong></h3>
 							<p>Nashville, TN<br>
 							Software Developer<br>
-							B.S. in Computer Science<br>
+							B.S. in CompSci<br>
 							U.S. Navy Veteran</p>		
 						</td>
 					</tr>
 					<tr>
-						<td style="margin: 0px">
-							<p style="font-family: Verdana, monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							I'm currently a senior at MTSU working towards a Bachelor's of Science 
-							in Computer Science, <gold>on track to graduate in 2021</hlt>. I'm most knowledgeable 
+						<td style="padding: 10px;">
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							I am a senior Computer Science student at MTSU, <hlt>on track to graduate in 2021</hlt>.I'm most knowledgeable 
 							in <hlt>C/C++</hlt>, but I'm also familiar with 
 							<hlt>Python</hlt>, <hlt>PHP</hlt>, <hlt>JavaScript</hlt>, <hlt>HTML</hlt>, and 
 							<hlt>CSS</hlt>.
@@ -82,6 +89,7 @@
 							troubleshooting methods, and gained leadership experience during my service 
 							as well. I look forward to furthering my career in technology and connecting 
 							with the people in it.</p>
+							<br>
 						</td>
 					</tr>
 				</table>
@@ -90,45 +98,34 @@
 		  
 		<label for="Slide3" id="Slide3" class="Slide">
 			<div class="content">
-			
-				<div class="mobileonly"><br><br><br><br><br><br></div>
-				
 				<div class="icontable">
-					<!--<h2>Lang:</h2>-->
-					<br>
-					<i class="devicon devicon-c-plain"></i>
-					<i class="devicon devicon-cplusplus-plain"></i>
-					<i class="devicon devicon-python-plain"></i>
-					
+					<h3>Languages:</h3>
+					<i class="devicon devicon-c-plain"></i><a class="nomobile">C</a>
+					<i class="devicon devicon-cplusplus-plain"></i><a class="nomobile">C++</a>
+					<i class="devicon devicon-python-plain"></i><a class="nomobile">Python</a>
+					<i class="devicon devicon-javascript-plain"></i><a class="nomobile">JavaScript</a>
 					<br><br>
-					
-					<i class="devicon devicon-javascript-plain"></i>
-					<i class="devicon devicon-html5-plain"></i>
-					<i class="devicon devicon-css3-plain"></i>
-					
+					<h3>Web:</h3>
+					<i class="devicon devicon-html5-plain"></i><a class="nomobile">HTML</a>
+					<i class="devicon devicon-css3-plain"></i><a class="nomobile">CSS</a>
 					<br><br>
-					
-					<!--<br><br>
-					<h2>Tech:</h2>-->
-					<i class="devicon devicon-git-plain"></i>
-					<i class="devicon devicon-linux-plain"></i>
-					<i class="devicon devicon-visualstudio-plain"></i>
+					<h3>Tools:</h3>
+					<i class="devicon devicon-git-plain"></i><a class="nomobile">Git</a>
+					<i class="fa fa-github"></i><a class="nomobile">Github</a>
+					<i class="devicon devicon-linux-plain"></i><a class="nomobile">Linux</a>
+					<i class="devicon devicon-visualstudio-plain"></i><a class="nomobile">VScode</a>
 				</div>
-				
 			</div>
 		</label>
 		  
 		<label for="Slide4" id="Slide4" class="Slide">
 			<div class="content">
 			
-				<div class="mobileonly"><br><br><br><br><br></div>
-
 				<a href="https://github.com/UtahMcEntire/skeletonplusplus" target="_blank"><h3><strong>Skeleton++</strong></h3></a>
 				<hr>
 				<i id="techBubble">C++</i><i id="techBubble">Windows</i><i id="techBubble">Command Line</i>
 				<p id="techDesc"><br>Windows program that writes the beginnings of a C++ program. It is able to set up
-				functions, parameters, classes, pass by reference/value, and libraries. All the user
-				has to do is write the function body. The online version still a work in progress.</p>
+				functions, parameters, classes, pass by reference/value, and libraries.</p>
 				
 				<br>
 				
@@ -142,28 +139,20 @@
 				<a href="https://um92.dev/"><h3><strong>UM92.dev</strong></h3></a>
 				<hr>
 				<i id="techBubble">HTML</i><i id="techBubble">CSS</i><i id="techBubble">JavaScript</i>
-				<p id="techDesc"><br>This website!</p>
-				
+				<p id="techDesc"><br>This portfolio website! I had a lot of fun designing this one.
+				There's a lot of fun in design so I'm always excited to do more of it.</p>
+			
+			<br>
 			</div>
 		</label>
 		  
 		<label for="Slide5" id="Slide5" class="Slide">
 			<div class="content">
-				
-				<div class="mobileonly"><br><br><br></div>
-				
 				<div class="icontable">
-					<!--<h2>Professional:</h2>-->
-					<a href="https://linkedin.com/in/utahmcentire/" target="_blank"><i class="fa fa-linkedin"></i></a>
-					<a href="https://github.com/utahmcentire" target="_blank"><i class="fa fa-github"></i></a>
-					<a href="mailto:utahmcentire@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-					
-					<br><br>
-					<a href="tel:6156185949" target="_blank"><i class="fa fa-phone"></i></a>
-					
-					<!--<h2>Social:</h2>-->
-					<a href="https://twitter.com/utahwtf" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a href="https://instagram.com/utahwtf" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a href="https://linkedin.com/in/utahmcentire/" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;linkedin</a><br><div id="mobileonly"><br></div>
+					<a href="https://github.com/utahmcentire" target="_blank"><i class="fa fa-github"></i>&nbsp;github</a><br><div id="mobileonly"><br></div>
+					<a href="mailto:utahmcentire@gmail.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;email</a><br><div id="mobileonly"><br></div>
+					<a href="tel:6156185949" target="_blank"><i class="fa fa-phone"></i>&nbsp;+1 (615) 618-5949</a><br>
 				</div>
 			</div>
 		</label>

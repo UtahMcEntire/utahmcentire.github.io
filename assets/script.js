@@ -6,18 +6,7 @@
   ga('create', 'UA-46156385-1', 'cssscript.com');
   ga('send', 'pageview');
 
-/* replaces css file with chosen theme 
-function changeCSS(cssFile, cssLinkIndex) {
-
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-}*/
+/* replaces css file with chosen theme */
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
