@@ -344,6 +344,11 @@ a.buttondead:hover {
 		font-size: 12px;
 	}
 	
+	.backbutton {
+		font-size: 18px;
+		position: absolute;
+	}
+	
 	.content {
 		width: 90vw;
 		min-height: 40vh;

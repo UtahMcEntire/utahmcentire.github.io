@@ -343,7 +343,8 @@ a.backbutton {
 	
 	.backbutton {
 		font-size: 18px;
-		}
+		position: absolute;
+	}
 	
 	.content {
 		width: 90vw;
