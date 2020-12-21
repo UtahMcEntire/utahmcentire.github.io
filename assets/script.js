@@ -1,63 +1,46 @@
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+/* back button */
+function goBack() {
+	window.history.back();
+	}
 
-  ga('create', 'UA-46156385-1', 'cssscript.com');
-  ga('send', 'pageview');
-
-/* replaces css file with chosen theme */
-
-var style_cookie_name = "style" ;
-var style_cookie_duration = 30 ;
-
-function switch_style ( css_title )
-{
-var i, link_tag ;
-  for (i = 0, link_tag = document.getElementsByTagName("link") ;
-    i < link_tag.length ; i++ ) {
-    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
-      link_tag[i].title) {
-      link_tag[i].disabled = true ;
-      if (link_tag[i].title == css_title) {
-        link_tag[i].disabled = false ;
-      }
-    }
-    set_cookie( style_cookie_name, css_title,
-      style_cookie_duration );
-  }
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+	//document.cookie='sel_theme='+themeName+';';
 }
-function set_style_from_cookie()
-{
-  var css_title = get_cookie( style_cookie_name );
-  if (css_title.length) {
-    switch_style( css_title );
-  }
+// function to toggle between light and dark theme
+function toggleTheme() {
+   if (localStorage.getItem('theme') === 'theme-dark'){
+       setTheme('theme-light');
+   } else {
+       setTheme('theme-dark');
+   }
 }
 
-function set_cookie ( cookie_name, cookie_value,
-    lifespan_in_days, valid_domain )
-{
-
-    var domain_string = valid_domain ?
-                       ("; domain=" + valid_domain) : '' ;
-    document.cookie = cookie_name +
-                       "=" + encodeURIComponent( cookie_value ) +
-                       "; max-age=" + 60 * 60 *
-                       24 * lifespan_in_days +
-                       "; path=/" + domain_string ;
-}
-
-function get_cookie ( cookie_name )
-{
-    // 
-    var cookie_string = document.cookie ;
-    if (cookie_string.length != 0) {
-        var cookie_value = cookie_string.match (
-                        '(^|;)[\s]*' +
-                        cookie_name +
-                        '=([^;]*)' );
-        return decodeURIComponent ( cookie_value[2] ) ;
-    }
-    return '' ;
-}
+// Immediately invoked function to set the theme on initial load
+// If local time between 9pm and 6am, dark theme, else light theme
+var d = new Date();
+var currHour = d.getHours();
+(function () {
+	
+	/*var cookie_pos=document.cookie.indexOf('sel_theme=');//locate value in cookie
+	
+	if(cookie_pos!=-1){//if string was found
+		var cookie_flavor=substr(cookie_pos+10,document.cookie.indexOf(';',cookie_pos));//extract the value of the cookie
+		//then run your already existing change theme function using the extracted name
+		setTheme(cookie_flavor);
+	}
+	
+	else {*/
+		if (localStorage.getItem('theme') === 'theme-dark') {
+			if (currHour >= 21 && currHour <= 6) {
+				setTheme('theme-dark');
+			}
+		}
+		
+		else {
+			setTheme('theme-light');
+		}
+	//}
+})();

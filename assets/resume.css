@@ -1,0 +1,418 @@
+/* reset */
+.theme-light {
+	--bgcolor: #f0f0f0;
+	--fgcolor: #333333;
+	--grcolor: #999999;
+	--hlcolor: #ff4500;
+	--gdcolor: #e2e3e4;
+	--cbcolor: #f9f9f9;
+	--accolor: #ff4500;
+	--bshadow: -1px 1px 0px var(--fgcolor),
+				-2px 2px 0px var(--fgcolor),
+				-3px 3px 0px var(--fgcolor),
+				-4px 4px 0px var(--fgcolor),
+				-5px 5px 0px var(--fgcolor),
+				-6px 6px 0px var(--fgcolor),
+				-7px 7px 0px var(--fgcolor),
+				-8px 8px 0px var(--fgcolor),
+				-9px 9px 0px var(--fgcolor),
+				-40px 40px 30px var(--grcolor);
+}
+
+.theme-dark {
+	--bgcolor: #212121;
+	--fgcolor: #f0f0f0;
+	--grcolor: #444444;
+	--hlcolor: #FFD700;
+	--gdcolor: #282828;
+	--cbcolor: #252525;
+	--accolor: #212121;
+	--bshadow: -1px 1px 0px var(--fgcolor),
+				-2px 2px 0px var(--fgcolor),
+				-3px 3px 0px var(--fgcolor),
+				-4px 4px 0px var(--fgcolor),
+				-5px 5px 0px var(--fgcolor),
+				-6px 6px 0px var(--fgcolor),
+				-7px 7px 0px var(--fgcolor),
+				-8px 8px 0px var(--fgcolor),
+				-9px 9px 0px var(--fgcolor);
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0px solid var(--fgcolor);
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+
+body {
+	line-height: 1.5; 
+	background-color: var(--bgcolor);
+	background-size: 20px 20px;
+	background-image:
+		linear-gradient(to right, var(--gdcolor) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--gdcolor) 1px, transparent 1px);
+	overflow-x: hidden;
+	font-family: "Overpass Mono", monospace;
+	color: var(--fgcolor);
+}
+
+body a {
+	text-decoration: none;
+}
+
+body a:hover {
+	color: var(--hlcolor);
+}
+
+body h0 {
+	font-size: 70px;
+	color: var(--fgcolor);
+}
+
+body h1 {
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+body h2 {
+	font-size: 28px;
+	margin-bottom: 5px;
+}
+
+body h3 {
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+
+ol, ul {
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+blockquote, q { quotes: none }
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none
+}
+
+bld {
+	font-weight: bold;
+}
+
+hlt {
+	color: var(--hlcolor);
+}
+
+strong {
+	font-weight: bold;
+	color: var(--hlcolor);
+}
+
+right {
+	text-align: right;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table tr td {
+	padding: 15px;
+}
+
+#resumename {
+	font-size: 70px;
+}
+
+#techBubble{
+	border: solid 2px var(--fgcolor);
+	background-color: var(--fgcolor);
+	color: var(--bgcolor);
+	border-radius: 5px;
+	padding: 2px 5px;
+	margin: 2px 5px 2px 5px;
+}
+
+#techDesc {
+	font-family: "Overpass Mono", monospace;
+	font-size: 18px;
+}
+
+a.button{
+	background-color: var(--bgcolor);
+	border: solid 2px var(--fgcolor);
+	border-radius: 0px;
+	padding: 5px 10px 0px 10px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 2px;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+a.backbutton {	
+	padding: 10px 10px 5px 10px;
+}
+
+.backbutton {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1002;
+	font-size: 26px;
+	color: var(--fgcolor);
+}
+
+.button {
+	margin-right: 50px;
+}
+
+.button:hover {
+	animation: buttonShift ease 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.colorpicker{
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container form .labels {
+	opacity: 0;
+	animation: fadeInAnimation ease 2s;
+	animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	position: absolute;
+	text-align: center;
+	width: 95vw;
+	height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.content {
+	width: 60vw;
+	min-height: 50vw;
+	display: inline-block;
+	padding: 4vw;
+	margin: 1vw;
+	text-shadow: none;
+	text-align: left;
+	border: solid 0.25px var(--fgcolor);
+	box-shadow: var(--bshadow);
+	background: var(--cbcolor);
+	vertical-align: top;
+}
+
+.content a, p, h1, h2, h3 { /* most/all of the text in the slides */
+	color: var(--fgcolor);
+}
+
+.devicon {
+	margin: 10px;
+	padding: 5px;
+}
+
+.fa {
+	margin: 10px;
+	padding: 5px;
+}
+
+.icontable {
+    display: inline;
+	font-size: 26px;
+	width: 100%;
+}
+
+.mobileonly {
+	display: none;
+}
+
+.stylebutton {
+    box-shadow: 0 0 20px var(--fgcolor);
+	position: fixed;
+	display: table;
+	background: var(--fgcolor);
+	right: -45px;
+	top: -45px;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	z-index: 1001;
+}
+
+.stylebutton:hover {
+    box-shadow: 0 0 100px var(--fgcolor);
+	-webkit-transition: 0.2s all ease;
+    -moz-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+}
+
+@keyframes animatevl {
+    0% {
+		height: 0%;
+	}
+    100% {
+		height: 80%;
+	}
+}
+
+@keyframes buttonShift { 
+	0% { 
+		box-shadow: 0 0 0px var(--hlcolor); 
+	} 
+	100% { 
+		box-shadow: -6px 6px 0px var(--hlcolor); 
+	} 
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+}
+
+@media only screen and (max-device-width: 720px) {
+	body {
+		line-height: 1.2;
+	}
+	
+	body a {
+		text-decoration: none;
+	}
+	
+	body h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	body h2 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	body h3 {
+		font-size: 18px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	body p {
+		font-size: 14px;
+	}
+	
+	#resumename {
+		font-size: 50px;
+	}
+	
+	#techBubble{
+		border: solid 1px var(--bgcolor);
+		border-radius: 0px;
+		padding: 2px 4px;
+		margin: 2px;
+		font-size: 12px;
+	}
+
+	#techDesc {
+		font-family: "Overpass Mono", monospace;
+		font-size: 12px;
+	}
+	
+	.backbutton {
+		font-size: 18px;
+		}
+	
+	.content {
+		width: 90vw;
+		min-height: 75vh;
+		padding: 10px;
+		margin-left: 3vw;
+	}
+
+	.container form {
+		-webkit-justify-content: flex-start; /* mobile navigation at top */
+		left: 0px;
+	}
+
+	.container form {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.container form .labels {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.container form .labels label {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.devicon {
+		margin: 1px;
+		padding: 3px;
+	}
+	
+	.fa {
+		margin: 1px;
+		padding: 3px;
+	}
+	
+	.icontable {
+		display: block;
+		margin: 1px;
+		padding: 3px;
+	}
+	
+	.mobileonly {
+		display: block;
+	}
+	
+	.nomobile {
+		display: none;
+	}
+	
+	.wstylebutton {
+		box-shadow: none;
+		background-color: transparent;
+		background-image: url("sun.svg");
+		background-size: 100% 100%;
+		right: 2vh;
+		top: 2vh;
+		width: 4vh;
+		height: 4vh;
+	}
+}

@@ -1,39 +1,34 @@
 /* reset */
+:root {
+	--bgcolor: #212121;
+	--fgcolor: #f0f0f0;
+	--hlcolor: gold;
+	--gdcolor: #282828;
+}
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0px solid black;
+	border: 0px solid var(--bgcolor);
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline
+	vertical-align: baseline;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
 
 body {
-	line-height: 1.5; 
-	background-color: #212121;
+	line-height: 1;
+	background-color: var(--bgcolor);
 	background-size: 20px 20px;
 	background-image:
-		linear-gradient(to right, #282828 1px, transparent 1px),
-		linear-gradient(to bottom, #282828 1px, transparent 1px);
+		linear-gradient(to right, var(--gdcolor) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--gdcolor) 1px, transparent 1px);
 }
 
 body {
 	font-family: "Overpass Mono", monospace;
-	color: #f2f3f4;
-}
-
-body a {
-	text-decoration: none;
-}
-
-body a:hover {
-	text-shadow: 0 0 6px #f2f3f4;
-	animation: fadeGlow ease-in-out 0.3s;
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
+	color: var(--fgcolor);
 }
 
 body h1 {
@@ -50,7 +45,12 @@ body h2 {
 
 body h3 {
 	font-size: 26px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+body h4 {
+	font-size: 20px;
+	margin-bottom: 10px;
 }
 
 ol, ul { list-style: none }
@@ -67,12 +67,12 @@ bld {
 }
 
 hlt {
-	color: gold;
+	color: var(--hlcolor);
 }
 
 strong {
 	font-weight: bold;
-	color: gold;
+	color: var(--hlcolor);
 }
 
 table {
@@ -85,36 +85,33 @@ table {
 }
 
 #slide1 {
-	color: #f2f3f4 !important;
+	color: var(--fgcolor) !important;
 }
 
 #slide2 {
-	color: #f2f3f4 !important;
+	color: var(--fgcolor) !important;
 }
 
 #slide3 {
-	color: #f2f3f4 !important;
+	color: var(--fgcolor) !important;
 }
 
 #slide4 {
-	color: #f2f3f4 !important;
+	color: var(--fgcolor) !important;
 }
 
 #slide5 {
-	color: #f2f3f4 !important;
+	color: var(--fgcolor) !important;
 }
 
 #techBubble{
-	border: solid 2px #f2f3f4;
-	border-radius: 0px;
-	padding: 2px 5px;
-	margin: 2px 5px 2px 5px;
-}
-
-#techBubble:hover{
-	border: solid 2px #f2f3f4;
-	color: #212121;
-	background-color: #f2f3f4;
+	border: solid 2px var(--fgcolor);
+	background-color: var(--fgcolor);
+	color: var(--bgcolor);
+	border-radius: 5px;
+	padding: 5px 5px 0px 5px;
+	margin: 2px 2px 2px 0px;
+	text-transform: uppercase;
 }
 
 #techDesc {
@@ -123,8 +120,8 @@ table {
 }
 
 a.button{
-	background-color: #212121;
-	border: solid 2px #f2f3f4;
+	background-color: var(--bgcolor);
+	border: solid 2px var(--fgcolor);
 	border-radius: 0px;
 	padding: 5px 10px 0px 10px;
 	text-align: center;
@@ -139,6 +136,7 @@ a.button:hover{
 
 .button {
 	margin-right: 50px;
+	line-height: 1.5;
 }
 
 .button:hover {
@@ -191,11 +189,14 @@ a.button:hover{
 
 .container form input {
 	height: 0;
-	margin: 15px 15px; /* distance between buttons vertically */
+	width: 200px;
+	margin: 20px 0px; /* distance between buttons vertically */
 	z-index: 1000;
 	animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
+	transition: all 0.25s linear;
+	-webkit-transition: all 0.25s linear;
 }
 
 .container form input:checked {
@@ -209,7 +210,7 @@ a.button:hover{
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	border: 3px solid #f2f3f4;
+	border: 3px solid var(--fgcolor);
 	border-radius: 0;
 	cursor: pointer;
 	transition: all 0.25s linear;
@@ -217,17 +218,18 @@ a.button:hover{
 }
 
 .container form input:checked:before { /* active cube style */
-	background-color: #f2f3f4;
-    box-shadow: 0 0 10px #f2f3f4;
+	opacity: 1;
+	background-color: var(--bgcolor);
 }
 
 .container form input:after {
 	font-family: "Overpass Mono", monospace;
 	content: "" attr(title) "";
 	position: relative;
-	left: 55px; 		/* distance from left, inactive buttons */
+	left: 50px; 		/* distance from left, inactive buttons */
 	opacity: 0.15;		/* opacity of inactive buttons */
-	color: #f2f3f4;		/* color of all buttons */
+	color: var(--fgcolor);		/* color of all buttons */
+	padding-top: 3px;
 	font-size: 35px;	/* font size of all buttons */
 	display: block;
 	min-width: 80px;
@@ -237,8 +239,8 @@ a.button:hover{
 
 .container form input:checked:after {
 	opacity: 1;
-	left: 65px; /* distance from left, active button */
-	text-shadow: 0 0 5px #f2f3f4;
+	left: 60px; /* distance from left, active button */
+	/*text-shadow: 0 0 5px var(--fgcolor);*/
 }
 
 .container form input:hover:after:not(label) {
@@ -268,16 +270,6 @@ a.button:hover{
 .container form input:nth-of-type(5):checked ~ .labels label {
 	-webkit-transform: translateY(-400%);
 	transform: translateY(-400%);
-}
-
-.container form input:nth-of-type(6):checked ~ .labels label {
-	-webkit-transform: translateY(-500%);
-	transform: translateY(-500%);
-}
-
-.container form input:nth-of-type(7):checked ~ .labels label {
-	-webkit-transform: translateY(-600%);
-	transform: translateY(-600%);
 }
 
 .container form .labels {
@@ -329,17 +321,19 @@ a.button:hover{
 
 .content {
 	width: 60%;
+	min-height: 70vh;
 	box-sizing: border-box;
 	padding: 30px;
 	margin-left: 200px;
 	text-shadow: none;
-	border: solid 0.25px black;
-	box-shadow: -6px 6px 0px black;
+	border: solid 2px var(--fgcolor);
+	border-radius: 1px;
+	box-shadow: -9px 9px 0px var(--fgcolor);
 	background: #252525;
 }
 
 .content a, p, h1, h2, h3 { /* most/all of the text in the slides */
-	color: #f2f3f4;
+	color: var(--fgcolor);
 }
 
 .devicon {
@@ -348,8 +342,8 @@ a.button:hover{
 }
 
 .devicon:hover {
-	color: #212121;
-	background-color: gold;
+	color: var(--bgcolor);
+	background-color: var(--hlcolor);
 	border-radius: 5px;
 	-webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
@@ -363,9 +357,9 @@ a.button:hover{
 }
 
 .fa:hover {
-	color: #212121;
+	color: var(--bgcolor);
 	border-radius: 5px;
-	background-color: gold;
+	background-color: var(--hlcolor);
 	-webkit-transition: 0.3s all ease;
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
@@ -374,8 +368,44 @@ a.button:hover{
 
 .icontable {
     display: inline;
-	font-size: 26px;
+	font-size: 35px;
 	width: 100%;
+}
+
+.logo {
+	display: inline-block;
+	border-radius: 10px;
+	position: absolute;
+	left: 80px;
+	top: 30px;
+	width: 100px;
+	height: 100px;
+	font-size: 90px;
+	color: var(--bgcolor);
+	background-color: var(--fgcolor);
+	border: 5px solid black;
+	border-radius: 1px;
+	padding: 5px 10px 0px 10px;
+	text-align: center;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-shadow: none;
+	box-shadow: -6px 6px 0 var(--fgcolor);
+	z-index: 1001;
+	box-shadow: 	-8px 8px 0px -5px var(--bgcolor),
+					-8px 8px crimson,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px darkorange,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px gold,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px green,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px purple;
+}
+
+.logo:hover {
+	animation: fadeGlowLogo 1s ease infinite;
 }
 
 .mobileonly {
@@ -384,10 +414,10 @@ a.button:hover{
 
 .vl {
 	position: fixed;
-	border-left: 3px solid gold;
+	border-left: 3px solid var(--hlcolor);
 	height: 80%;
 	left: 310px;
-    box-shadow: 0 0 15px gold;
+    box-shadow: 0 0 15px var(--hlcolor);
 	opacity: 1;
 	animation-name: animatevl;
     animation-iteration-count: 1;
@@ -400,7 +430,7 @@ a.button:hover{
     box-shadow: 0 0 20px rgba(242, 243, 244, 1);
 	position: fixed;
 	display: table;
-	background: #f2f3f4;
+	background: var(--fgcolor);
 	right: -45px;
 	top: -45px;
 	border-radius: 50%;
@@ -419,11 +449,6 @@ a.button:hover{
 
 .bstylebutton {
 	display: none;
-}
-
-:root {
-  --shadow-color: #f2f3f4;
-  --shadow-color-light: #f2f3f4;
 }
 
 @keyframes animatevl {
@@ -446,19 +471,100 @@ a.button:hover{
 
 @keyframes fadeGlow { 
 	0% { 
-		text-shadow: 0 0 0px gold; 
+		text-shadow: 0 0 0px var(--hlcolor); 
 	} 
 	100% { 
-		text-shadow: 0 0 6px gold; 
+		text-shadow: 0 0 6px var(--hlcolor); 
 	} 
 }
 
 @keyframes fadeGlowf2f3f4 { 
 	0% { 
-		box-shadow: 0 0 0px #f2f3f4; 
+		box-shadow: 0 0 0px var(--fgcolor); 
 	} 
 	100% { 
-		box-shadow: -6px 6px 0px #f2f3f4; 
+		box-shadow: -6px 6px 0px var(--fgcolor); 
+	} 
+}
+
+@keyframes fadeGlowLogo { 
+	0% {
+		border: 5px solid black;
+		box-shadow: -8px 8px 0px -5px var(--bgcolor),
+					-8px 8px crimson,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px darkorange,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px gold,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px green,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px purple;
+	}
+	20% {
+		border: 5px solid black;
+		box-shadow: -8px 8px 0px -5px var(--bgcolor),
+					-8px 8px purple,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px crimson,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px darkorange,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px gold,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px green;
+	}
+	40% {
+		border: 5px solid black;
+		box-shadow: -8px 8px 0px -5px var(--bgcolor),
+					-8px 8px green,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px purple,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px crimson,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px darkorange,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px gold;
+	}
+	60% {
+		border: 5px solid black;
+		box-shadow: -8px 8px 0px -5px var(--bgcolor),
+					-8px 8px gold,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px green,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px purple,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px crimson,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px darkorange;
+	}
+	80% {
+		border: 5px solid black;
+		box-shadow: -8px 8px 0px -5px var(--bgcolor),
+					-8px 8px darkorange,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px gold,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px green,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px purple,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px crimson;
+	}
+	100% {
+		border: 5px solid black;
+		box-shadow: -8px 8px 0px -5px var(--bgcolor),
+					-8px 8px crimson,
+					-16px 16px 0px -5px var(--bgcolor),
+					-16px 16px darkorange,
+					-24px 24px 0px -5px var(--bgcolor),
+					-24px 24px gold,
+					-32px 32px 0px -5px var(--bgcolor),
+					-32px 32px green,
+					-40px 40px 0px -5px var(--bgcolor),
+					-40px 40px purple;
 	} 
 }
 
@@ -507,7 +613,7 @@ a.button:hover{
 	}
 	
 	#techBubble{
-		border: solid 1px #f2f3f4;
+		border: solid 1px var(--fgcolor);
 		border-radius: 0px;
 		padding: 2px 4px;
 		margin: 2px;
@@ -562,15 +668,15 @@ a.button:hover{
 	.container form input:before {
 		width: 5vw;		/* inactive cube style */
 		height: 5vw;
-		border: 2px solid #f2f3f4;
+		border: 2px solid var(--fgcolor);
 	}
 	
 	.container form input:checked:before {
 		width: 6vw;		/* active cube style */
 		height: 6vw;
-		border: 2px solid gold;
-		background-color: gold;
-		box-shadow: 0 0 10px gold;
+		border: 2px solid var(--hlcolor);
+		background-color: var(--hlcolor);
+		box-shadow: 0 0 10px var(--hlcolor);
 	}
 	
 	.container form input:after {
@@ -623,9 +729,9 @@ a.button:hover{
 	}
 	
 	.horiz {
-		border-top: solid 2px #f2f3f4;
-		box-shadow: 0 0 6px #f2f3f4;
-		top: 6vh;
+		border-top: solid 2px var(--fgcolor);
+		box-shadow: 0 0 6px var(--fgcolor);
+		top: 7vh;
 		left: 5vw;
 		position: absolute;
 		width: 90vw;
@@ -635,6 +741,10 @@ a.button:hover{
 		display: block;
 		margin: 1px;
 		padding: 3px;
+	}
+	
+	.logo {
+		display: none;
 	}
 	
 	.mobileonly {

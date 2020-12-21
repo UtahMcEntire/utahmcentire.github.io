@@ -1,79 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-light">
 <head>
 	<title>Utah McEntire - Online Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	
-	<link rel="stylesheet" href="assets/style.css">
-	
-	<link rel="stylesheet" type="text/css" title="dark" href="assets/style.css">
-	<link rel="alternate stylesheet" type="text/css" title="light" href="assets/white.css">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+	<link rel="stylesheet" href="assets/index.css">
 
-	
-	<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 	<script src="assets/script.js"></script>
 </head>
 
-<body onload="set_style_from_cookie()">
-
+<body>
+<div class="logo">u.</div>
 <div class="mobileonly horiz"></div>
 
 <div class="colorpicker">
-	<a href="#" onclick="switch_style('dark'); return false;" class="themes" id="dark">
-		<div class="bstylebutton"></div>
-	</a>
-	
-	<a href="#" onclick="switch_style('light'); return false;" class="themes" id="light">
-		<div class="wstylebutton"></div>
+	<a id="switch" onclick="toggleTheme()">
+		<div class="stylebutton"></div>
 	</a>
 </div>
 
 <div class="container">
 
 <div class="vl"></div>
+<div class="mwl nomobile">> made with love<svg viewBox="0 0 45 29.6" class="heart"><path d="M23.6 0c-3.4 0-6.3 2.7-7.6 5.6C14.7 2.7 11.8 0 8.4 0 3.8 0 0 3.8 0 8.4c0 9.4 9.5 11.9 16 21.2 6.1-9.3 16-12.1 16-21.2C32 3.8 28.2 0 23.6 0z"></path></svg></div>
 	<form>
-	<input class="nav" type="radio" id="Slide1" name="slider" title="home"  checked="checked"/><br>
-	<input class="nav" type="radio" id="Slide2" name="slider" title="about"/><br>
-	<input class="nav" type="radio" id="Slide3" name="slider" title="skills"/><br>
-	<input class="nav" type="radio" id="Slide4" name="slider" title="projects"/><br>
+	<input class="nav" type="radio" id="Slide1" name="slider" title="home"  checked="checked"/>
+	<input class="nav" type="radio" id="Slide2" name="slider" title="about"/>
+	<input class="nav" type="radio" id="Slide3" name="slider" title="skills"/>
+	<input class="nav" type="radio" id="Slide4" name="slider" title="projects"/>
 	<input class="nav" type="radio" id="Slide5" name="slider" title="contact"/>
 
 	<div class="labels">
 		<label for="Slide1" id="Slide1" class="Slide">
 			<div class="content">
 				<h1>Hello! I'm&nbsp;<strong>Utah</strong>.</h1>
-				<br><h2>I'm a <strong>full&nbsp;stack</strong> developer.</h2>
+				<br><br><h2>I'm a <strong>full&nbsp;stack</strong> developer.</h2>
 				<br><h3>I specialize in developing and deploying 
 				responsive websites and backend software.</h3><br>
-				<a href="mailto:utahmcentire@gmail.com" class="button">
-					<bld><h3>./email</h3></bld>
-				</a>
-				&nbsp;
-				<a href="assets/resume2020.pdf" class="button">
-					<bld><h3>./résumé</h3></bld>
-				</a>
+				<h3 style="display: inline-block;"><a href="mailto:utahmcentire@gmail.com" class="button">
+					<bld>./email</bld>
+				</a></h3>
+				<h3 style="display: inline-block;"><a href="resume.html" class="button">
+					<bld>./résumé</bld>
+				</a></h3>
 			</div>
 		</label>
 
 		<label for="Slide2" id="Slide2" class="Slide">
 			<div class="content">
-				<table>
+				<table class="nomobile">
 					<tr>
-						<td style="vertical-align: middle; padding: 10px;">
-							<div id="profilepic">
-								<img src="assets/me.jpg" style="width: 32%; border-radius: 20%; margin-right: 10px; float: left;">
-							</div>
-							<h3><strong>Utah&nbsp;McEntire</strong></h3>
-							<p>Nashville, TN<br>
+						<td style="padding: 10px; text-align: center;">
+							<h2><strong>Utah&nbsp;McEntire</strong></h2>
+							<h4>Nashville, TN<br>
 							Software Developer<br>
-							B.S. in CompSci<br>
-							U.S. Navy Veteran</p>		
+							B.S. in CompSci (2021)<br>
+							U.S. Navy Veteran</h4><br>
+							<img src="assets/smolme.png" style="width: 100px;">
+							<hr style="margin-top: -20px; width: 20vw;">
+								
 						</td>
-					</tr>
-					<tr>
 						<td style="padding: 10px;">
 							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							I am a senior Computer Science student at MTSU, <hlt>on track to graduate in 2021</hlt>.I'm most knowledgeable 
@@ -93,27 +85,69 @@
 						</td>
 					</tr>
 				</table>
+				<table class="mobileonly">
+					<tr>
+						<td>
+							<div id="profilepic" style="text-align: center;">
+								<img src="assets/smolme.png" style="height: 10vh;">
+							</div>	
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;">
+							<h2><strong>Utah&nbsp;McEntire</strong></h2>
+							<i>Nashville, TN<br>
+							Software Developer<br>
+							B.S. in CompSci (2021)<br>
+							U.S. Navy Veteran</i>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<br>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							I am a senior Computer Science student at MTSU, <hlt>on track to graduate in 2021</hlt>.I'm most knowledgeable 
+							in <hlt>C/C++</hlt>, but I'm also familiar with 
+							<hlt>Python</hlt>, <hlt>PHP</hlt>, <hlt>JavaScript</hlt>, <hlt>HTML</hlt>, and 
+							<hlt>CSS</hlt>.
+							<br><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							In 2016 finished a 5-year enlistment in the US Navy stationed in Pearl 
+							Harbor as an Electronics Technician. Most of my time was spent 
+							maintaining and troubleshooting communication systems 
+							onboard USS Hopper. I have extensive knowledge in electronic theory, advanced 
+							troubleshooting methods, and gained leadership experience during my service 
+							as well. <hlt>I look forward to furthering my career in technology and connecting 
+							with the people in it.</hlt></p>
+						</td>
+					</tr>
+				</table>
 			</div>
 		</label>
 		  
 		<label for="Slide3" id="Slide3" class="Slide">
 			<div class="content">
 				<div class="icontable">
-					<h3>Languages:</h3>
-					<i class="devicon devicon-c-plain"></i><a class="nomobile">C</a>
-					<i class="devicon devicon-cplusplus-plain"></i><a class="nomobile">C++</a>
-					<i class="devicon devicon-python-plain"></i><a class="nomobile">Python</a>
-					<i class="devicon devicon-javascript-plain"></i><a class="nomobile">JavaScript</a>
+					<h3><strong>Languages:</strong></h3>
+					<i class="devicon devicon-c-plain"></i><i class="nomobile" id="langtext">C</i>
+					<i class="devicon devicon-cplusplus-plain"></i><i class="nomobile" id="langtext">C++</i>
+					<i class="devicon devicon-python-plain"></i><i class="nomobile" id="langtext">Python</i>
+					<br>
+					<i class="devicon devicon-javascript-plain"></i><i class="nomobile" id="langtext">JavaScript</i>
+					<i class="devicon devicon-php-plain"></i><i class="nomobile" id="langtext">PHP</i>
 					<br><br>
-					<h3>Web:</h3>
-					<i class="devicon devicon-html5-plain"></i><a class="nomobile">HTML</a>
-					<i class="devicon devicon-css3-plain"></i><a class="nomobile">CSS</a>
+					<h3><strong>Web:</strong></h3>
+					<i class="devicon devicon-html5-plain"></i><i class="nomobile" id="langtext">HTML</i>
+					<i class="devicon devicon-css3-plain"></i><i class="nomobile" id="langtext">CSS</i>
 					<br><br>
-					<h3>Tools:</h3>
-					<i class="devicon devicon-git-plain"></i><a class="nomobile">Git</a>
-					<i class="fa fa-github"></i><a class="nomobile">Github</a>
-					<i class="devicon devicon-linux-plain"></i><a class="nomobile">Linux</a>
-					<i class="devicon devicon-visualstudio-plain"></i><a class="nomobile">VScode</a>
+					<h3><strong>Tools:</strong></h3>
+					<i class="devicon devicon-git-plain"></i><i class="nomobile" id="langtext">Git</i>
+					<i class="devicon devicon-github-original"></i><i class="nomobile" id="langtext">Github</i>
+					<i class="devicon devicon-linux-plain"></i><i class="nomobile" id="langtext">Linux</i>
+					<br>
+					<i class="devicon devicon-visualstudio-plain"></i><i class="nomobile" id="langtext">VScode</i>
+					<i class="devicon devicon-wordpress-plain"></i><i class="nomobile" id="langtext">WordPress</i>
+					<i class="devicon devicon-gimp-plain"></i><i class="nomobile" id="langtext">Gimp</i>
 				</div>
 			</div>
 		</label>
@@ -121,38 +155,63 @@
 		<label for="Slide4" id="Slide4" class="Slide">
 			<div class="content">
 			
-				<a href="https://github.com/UtahMcEntire/skeletonplusplus" target="_blank"><h3><strong>Skeleton++</strong></h3></a>
+				<h3><strong>Skeleton++</strong></h3>
 				<hr>
 				<i id="techBubble">C++</i><i id="techBubble">Windows</i><i id="techBubble">Command Line</i>
 				<p id="techDesc"><br>Windows program that writes the beginnings of a C++ program. It is able to set up
 				functions, parameters, classes, pass by reference/value, and libraries.</p>
+				<a href="https://um92.dev/spp" rel=”noopener noreferrer” class="button">
+					<bld>./live</bld>
+				</a>
+				<a href="https://github.com/UtahMcEntire/skeletonplusplus" class="button">
+					<bld>./code</bld>
+				</a>
 				
 				<br>
+				<br>
+				<br>
 				
-				<a href="https://jordanstickler.wordpress.com" target="_blank" ><h3><strong>StringBean&nbsp;Illustrations</strong></h3></a>
+				<h3><strong>StringBean&nbsp;Illustrations</strong></h3>
 				<hr>
 				<i id="techBubble">Wordpress</i>
 				<p id="techDesc"><br>A basic wordpress gallery for a commercial and children's book illustrator.</p>
-				
+				<a href="https://jordanstickler.wordpress.com"  target="_blank" rel=”noopener noreferrer” class="button">
+					<bld>./live</bld>
+				</a>
+				<a class="buttondead">
+					<bld>./code</bld>
+				</a>
+				<br>
+				<br>
 				<br>
 
-				<a href="https://um92.dev/"><h3><strong>UM92.dev</strong></h3></a>
+				<h3><strong>UM92.dev</strong></h3>
 				<hr>
 				<i id="techBubble">HTML</i><i id="techBubble">CSS</i><i id="techBubble">JavaScript</i>
 				<p id="techDesc"><br>This portfolio website! I had a lot of fun designing this one.
-				There's a lot of fun in design so I'm always excited to do more of it.</p>
-			
-			<br>
+				There's a lot of fun in UX/UI so I'm always excited to do more of it.</p>
+				<a href="https://um92.dev/" target="_blank" rel=”noopener noreferrer” class="button">
+					<bld>./live</bld>
+				</a>
+				<a href="https://github.com/UtahMcEntire/utahmcentire.github.io" target="_blank" rel=”noopener noreferrer” class="button">
+					<bld>./code</bld>
+				</a>
+				
+				<br>
+				<br>
+				<br>
+
+				<a href="projects.html"><hlt>+ more</hlt></a>
 			</div>
 		</label>
 		  
 		<label for="Slide5" id="Slide5" class="Slide">
 			<div class="content">
 				<div class="icontable">
-					<a href="https://linkedin.com/in/utahmcentire/" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;linkedin</a><br><div id="mobileonly"><br></div>
-					<a href="https://github.com/utahmcentire" target="_blank"><i class="fa fa-github"></i>&nbsp;github</a><br><div id="mobileonly"><br></div>
-					<a href="mailto:utahmcentire@gmail.com" target="_blank"><i class="fa fa-envelope"></i>&nbsp;email</a><br><div id="mobileonly"><br></div>
-					<a href="tel:6156185949" target="_blank"><i class="fa fa-phone"></i>&nbsp;+1 (615) 618-5949</a><br>
+					<a href="https://linkedin.com/in/utahmcentire/" target="_blank" rel=”noopener noreferrer”><i class="fa fa-linkedin"></i>&nbsp;linkedin</a><br><div class="mobileonly"><br></div>
+					<a href="https://github.com/utahmcentire" target="_blank" rel=”noopener noreferrer”><i class="fa fa-github-alt"></i>&nbsp;github</a><br><div class="mobileonly"><br></div>
+					<a href="mailto:utahmcentire@gmail.com" target="_blank" rel=”noopener noreferrer”><i class="fa fa-envelope"></i>&nbsp;email</a><br><div class="mobileonly"><br></div>
+					<a href="tel:6156185949" target="_blank" rel=”noopener noreferrer”><i class="fa fa-phone"></i>&nbsp;+1 (615) 618-5949</a><br>
 				</div>
 			</div>
 		</label>
