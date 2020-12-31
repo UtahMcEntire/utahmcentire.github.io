@@ -44,3 +44,10 @@ var currHour = d.getHours();
 		}
 	//}
 })();
+
+function hidediv(){
+  document.getElementById('showhide').style.display ='none';
+}
+function showdiv(){
+  document.getElementById('showhide').style.display = 'inline-block';
+}
