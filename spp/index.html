@@ -4,19 +4,36 @@
 	<title>Skeleton++</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
-		<link rel="stylesheet" href="../assets/resume.css">
+		<link rel="shortcut icon" type="image/x-icon" href="https://utahmcentire.github.io/assets/favicon.ico" />
+		<link rel="stylesheet" href="spp.css">
 		
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
-		<script src="../assets/script.js"></script>
+		<script src="https://utahmcentire.github.io/assets/script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+		$(function() {
+			$('input[name=headImpFiles]').on('click init-headImpBox', function() {
+				$('#headImpFilesBox').toggle($('#showheadImpFilesBox').prop('checked'));
+			}).trigger('init-headImpBox');
+		});
+		$(function() {
+			$('input[name=hasFuncs]').on('click init-funcsBox', function() {
+				$('#funcsBox').toggle($('#showfuncsBox').prop('checked'));
+			}).trigger('init-funcsBox');
+		});
+		function clearThis(target){
+			target = document.getElementById(target);
+			target.value = "";
+		}
+
+		</script>	
 </head>
 
 <body>
-
 <div class="colorpicker">
 	<a id="switch" onclick="toggleTheme()">
 		<div class="stylebutton"></div>
@@ -30,15 +47,117 @@
 
 <div class="container">
 
-	<form>
-	<h2 style="margin-left: 44vw;">Skeleton++</h2></center>
+	<form <!--action="done.php" method="POST" onkeydown="return event.key != 'Enter';"-->>
 	<div class="labels">
 		<label for="Slide1" id="Slide1" class="Slide">
-			<div class="content">
-			<h1 style="background: var(--hlcolor);">Skeleton++ Online is<br>still under construction.</h1>
-			<br>
-			<h2>You can see the Github page for the command line version <a href = "https://github.com/UtahMcEntire/skeletonplusplus"><u>here</u></a> though!</h2>
-		
+		<div class="content">
+			<center><h3>Skeleton++ Online is still under construction.</h3>
+			<h4>You can see the Github page for the working command line version <a href = "https://github.com/UtahMcEntire/skeletonplusplus"><u>here</u></a> though!</h4>
+			<h4><hlt>You could also look at some <a href="sampleoutput.html"><u>sample output</u></a> if interested.<hlt></h4>
+			<hr>
+			
+			<div id="spp">
+				<pre>        __           __         __                                   </pre>
+				<pre>  _____|  | __ ____ |  |  _____/  |_  ____  ____      __       __    </pre>
+				<pre> /  ___/  |/ // __ \|  |_/ __ \   __\/    \|    \  __|  |_____|  |___</pre>
+				<pre> \___ \|    <\  ___/|  |\  ___/|  | (  <>  )  |  \/__    __/__    __/</pre>
+				<pre> /_____>__|_ \\_____>___/\_____>__|  \____/|__|  /   |__|     |__|   </pre>
+				<pre>============\/=================================\/============ONLINE==</pre><br>
+			</div></center>
+
+				<div class="sppInfo">
+				<p><strong>Part 1: Basic Info</strong></p>
+					<label for="classCode">Class Code:&nbsp;</label><input type="text" id="classCode" name="classCode" placeholder="0000"><br>
+					<label for="classSection">Class Section:&nbsp;</label><input type="text" id="classSection" name="classSection" placeholder="000"><br>
+					<label for="fullName">Full Name:&nbsp;</label><input type="text" id="fullName" name="fullName" placeholder="Jane Doe"><br>
+					<label for="labName">Lab Name:&nbsp;</label><input type="text" id="labName" name="labName" placeholder="Lab0"><br>
+					<label for="dueDate">Due Date:&nbsp;</label><input type="text" id="dueDate" name="dueDate" placeholder="07/14/21"><br>
+					<label for="progTitle">Program Title:&nbsp;</label><input type="text" id="progTitle" name="progTitle" placeholder="Title"><br>
+					<label for="fileName">File Name:&nbsp;</label><input type="text" id="fileName" name="fileName" placeholder="myProgram"><br>
+					<label for="progDesc">Program Description:&nbsp;</label><input type="text" id="progDesc" name="progDesc" placeholder="A short description"><br>
+			
+
+				<p><strong>Part 2: Class</strong></p>
+					Does the program implement a class?<br>
+					<input type="radio" class="headImpFilesY" id="showheadImpFilesBox" name="headImpFiles" value="y" /> Yes<br>
+					<input type="radio" class="headImpFilesN" name="headImpFiles" value="n" onclick='clearThis("className")' checked /> No<br>
+					
+					<div class="optionalBoxes" id="headImpFilesBox">
+						<label for="className">Class Name:&nbsp;</label><input type="text" id="className" name="className" placeholder="example" />
+					</div>
+					
+				<p><strong>Part 3: Includes</strong></p>
+					Which library headers would you like to #include?<br>
+					<label for="incIostream">iostream:&nbsp;</label>
+						<input id='incIostream' type='checkbox' value='y' name='incIostream'><br>	
+						
+					<label for="incFstream">fstream:&nbsp;</label>
+						<input id='incFstream' type='checkbox' value='y' name='incFstream'><br>
+					
+					<label for="incString">string:&nbsp;</label>
+						<input id='incString' type='checkbox' value='y' name='incString'><br>
+					
+					<label for="incIomanip">iomanip:&nbsp;</label>
+						<input id='incIomanip' type='checkbox' value='y' name='incIomanip'><br>
+					
+					<label for="incCstdlib">cstdlib:&nbsp;</label>
+						<input id='incCstdlib' type='checkbox' value='y' name='incCstdlib'><br><br>
+					
+					Would you like to use namespace std?<br>
+					<label for="incNamespace">namespace std:&nbsp;</label>
+						<input id='incNamespace' type='checkbox' value='y' name='incNamespace'>	
+										
+				<p><strong>Part 4: Functions</strong></p>
+					Does the program have functions?<br>
+					<input type="radio" class="hasFuncs" id="showFuncsBox" name="hasFuncs" value="y" checked /> Yes<br>
+					<input type="radio" class="hasFuncs" name="hasFuncs" value="n" /> No<br><br>
+					<div class="optionalBoxes" id="funcsBox">
+						<label for="funcType">Function Type:&nbsp;</label><input type="text" id="funcType" name="funcType" placeholder="void"><br>
+						<label for="funcName">Function Name:&nbsp;</label><input type="text" id="funcName" name="funcName" placeholder="insert"><br>
+						<p>Does the function have parameters?</p>
+						<input type="radio" class="hasParams" id="hasParams" name="hasParams" value="y" /> Yes<br>
+						<input type="radio" class="hasParams" id="hasParams" name="hasParams" value="n" checked /> No<br><br>
+				
+							<label for="paramType">Parameter Type:&nbsp;</label><input type="text" id="paramType" name="paramType" placeholder="int"><br>
+							<label for="paramName">Parameter Name:&nbsp;</label><input type="text" id="paramName" name="paramName" placeholder="sum"><br>
+							<p>Pass By Reference?</p>
+							<input type="radio" class="passByRef" id="passByRef" name="passByRef" value="y" /> Yes<br>
+							<input type="radio" class="passByRef" id="passByRef" name="passByRef" value="n" checked /> No<br>
+							
+							<p>Add another parameter? (Command-Line Version Only, for now)</p>
+							<input type="radio" class="anotherParam" id="anotherParam" name="anotherParam" value="y" disabled /> Yes<br>
+							<input type="radio" class="anotherParam" id="anotherParam" name="anotherParam" value="n" checked /> No<br>
+						
+						<p>Add another function? (Command-Line Version Only, for now)</p>
+						<input type="radio" class="anotherFunc" id="anotherFunc" name="anotherFunc" value="y" disabled /> Yes<br>
+						<input type="radio" class="anotherFunc" id="anotherFunc" name="anotherFunc" value="n" checked /> No<br>
+					</div>	
+				
+				<p><strong>Part 5: Input/Output Files</strong></p>
+					Does the program have input/output files?<br>
+					<input type="radio" class="hasInOut" id="hasInOut" name="hasInOut" value="y" /> Yes<br>
+					<input type="radio" class="hasInOut" id="hasInOut" name="hasInOut" value="n" checked /> No<br><br>
+					
+					<!--If yes: do -->
+					
+					<!--------InOut Loop Begins-->
+					Is it an input or output file?<br>
+					<input type="radio" class="hasIn" id="hasIn" name="inOrOut" value="in" /> In<br>
+					<input type="radio" class="hasOut" id="hasOut" name="inOrOut" value="out" /> Out<br><br>
+					
+					<label for="fileVar">File Variable:&nbsp;</label><input type="text" id="fileVar" name="fileVar" placeholder="inFile"><br>
+					<label for="inOutFile">In/Out Filename:&nbsp;</label><input type="text" id="inOutFile" name="inOutFile" placeholder="input.txt"><br><br>
+					
+					Add Another In/Out File? (Command-Line Version Only, for now)<br>
+					<input type="radio" class="anotherInOut" id="anotherInOut" name="anotherInOut" value="y" disabled/> Yes<br>
+					<input type="radio" class="anotherInOut" id="anotherInOut" name="anotherInOut" value="n" checked /> No<br>
+					<!---------In/Out Loop Ends-->
+					<br>
+				</div>
+				
+			<center>
+			<button type="submit" disabled>Submit</button>
+			</center>
 		</div>
 	</label>
 	</form>

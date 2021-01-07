@@ -1,0 +1,39 @@
+// LAB2 BY Utah McEntire, CSCI 3080-001, Due: 05/05/2020
+// PROGRAM ID: example.cpp / Coin Counter
+// AUTHOR: Utah McEntire
+// INSTALLATION: MTSU
+// REMARKS: This is a short description
+// Started via Skeleton++
+
+#include "exClass.h"
+#include <iostream>
+#include <fstream>
+#include <cassert>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+using namespace std;
+
+
+int main(){
+	//opens necessary files
+	ifstream myIn;
+	myIn.open("inventory.dat");
+	assert(myIn);
+
+	ifstream otherIn;
+	otherIn.open("customers.txt");
+	assert(otherIn);
+
+	ofstream myOut;
+	myOut.open("finalized.dat");
+	assert(myOut);
+
+
+	//close the opened files
+	myIn.close();
+	otherIn.close();
+	myOut.close();
+	return 0;
+}
+

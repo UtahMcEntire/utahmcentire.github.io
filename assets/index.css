@@ -69,6 +69,11 @@ body a:hover {
 	color: var(--hlcolor);
 }
 
+body h0 {
+	font-size: 80px;
+	color: var(--fgcolor);
+}
+
 body h1 {
 	font-size: 40px;
 	text-transform: uppercase;
@@ -112,7 +117,7 @@ hlt {
 
 strong {
 	font-weight:bold;
-	color: var(--hlcolor);
+	color: var(--accolor);
 }
 
 table {
@@ -145,6 +150,10 @@ a.button{
 	text-shadow: none;
 }
 
+a.button:hover{
+	border: solid 2px var(--hlcolor);
+}
+
 .button {
 	margin-right: 50px;
 }
@@ -171,7 +180,6 @@ a.buttondead {
 a.buttondead:hover {
 	color: var(--fgcolor);
 	text-decoration: none;
-	cursor: not-allowed;
 }
 
 .colorpicker{
@@ -198,7 +206,7 @@ a.buttondead:hover {
 .container form {
 	box-sizing: border-box;
 	text-align: left;
-	padding: 22px;
+	padding: 0px;
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
@@ -213,7 +221,7 @@ a.buttondead:hover {
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
-	left: 20px;
+	left: 0px;
 	z-index: 1000;
 }
 
@@ -253,17 +261,14 @@ a.buttondead:hover {
 	background-color: var(--accolor); /* fill color of active cube */
 }
 
-.container form input:hover { /* hover color attempt */
-	background-color: rgba(255, 69, 0, 1);
-}
-
 .container form input:after {
 	font-family: "Overpass Mono", monospace;
 	content: "" attr(title) "";
 	position: relative;
-	left: 50px;			/* distance from left, inactive buttons */
-	opacity: 0.55;		/* opacity of inactive buttons */
-	color: var(--fgcolor);		/* color of all button text */
+	left: 55px;			/* distance from left, inactive buttons */
+	color: transparent;		/* color of all button text */
+	text-shadow: 0 0 3px var(--fgcolor); /* use shadow instead */
+	opacity: 0.75;
 	padding-top: 3px;
 	font-size: 35px;	/* font size of all buttons */
 	display: block;
@@ -274,8 +279,9 @@ a.buttondead:hover {
 
 .container form input:checked:after {
 	opacity: 1;
-	left: 60px; /* distance from left, active button */
-	/*text-shadow: 0 0 5px var(--bgcolor);*/
+	color: var(--fgcolor);
+	left: 65px; /* distance from left, active button */
+	text-shadow: 0 0 5px var(--bgcolor);
 }
 
 .container form input:hover:after:not(label) {
@@ -410,12 +416,12 @@ a.buttondead:hover {
 	width: 100px;
 	height: 100px;
 	font-size: 90px;
-	letter-spacing: -15px;
+	letter-spacing: -18px;
 	color: var(--fgcolor);
 	background-color: var(--bgcolor);
 	border: 5px solid var(--fgcolor);
 	border-radius: 0px;
-	padding: 5px 10px 0px 10px;
+	padding: 0 0 0 0;
 	text-align: center;
 	margin: 4px 2px;
 	cursor: default;
@@ -437,6 +443,10 @@ a.buttondead:hover {
 	display: none;
 }
 
+.nomobile tr td {
+	padding: 10px;
+}
+
 .vl {
 	height: 70vh;
 	position: fixed;
@@ -449,6 +459,7 @@ a.buttondead:hover {
     animation-timing-function: ease;
     animation-duration: 1s;
 	animation-fill-mode: both;
+	z-index: 1001;
 }
 
 .stylebutton{
@@ -458,7 +469,7 @@ a.buttondead:hover {
 	background: var(--fgcolor);
 	right: -45px;
 	top: -45px;
-	border-radius: 50%;
+	transform: rotate(45deg);
 	width: 90px;
 	height: 90px;
 	z-index: 1001;
@@ -483,10 +494,10 @@ a.buttondead:hover {
 
 @keyframes buttonShift { 
 	0% { 
-		box-shadow: 0 0 0px var(--hlcolor); 
+		box-shadow: 0 0 0 var(--hlcolor); 
 	}
 	100% { 
-		box-shadow: -6px 6px 0px var(--hlcolor); 
+		box-shadow: -6px 6px 0 var(--hlcolor); 
 	} 
 }
 
@@ -625,8 +636,8 @@ a.buttondead:hover {
 		font-size: 14px;
 	}
 	
-	#profilepic {
-		width: 75vw;
+	#profilepic img {
+		height: 10vh;
 	}
 	
 	#techBubble{
@@ -643,27 +654,23 @@ a.buttondead:hover {
 	}
 	
 	.content {
-		width: 90vw;
+		width: 85vw;
 		min-height: 75vh;
 		padding: 10px;
-		margin-left: 0vw;
+		margin-left: 5vw;
 		box-shadow: 
 				-1px 1px 0px var(--fgcolor),
 				-2px 2px 0px var(--fgcolor),
 				-3px 3px 0px var(--fgcolor),
 				-4px 4px 0px var(--fgcolor),
-				-5px 5px 0px var(--fgcolor),
-				-6px 6px 0px var(--fgcolor),
-				-7px 7px 0px var(--fgcolor),
-				-8px 8px 0px var(--fgcolor),
-				-9px 9px 0px var(--fgcolor);
+				-5px 5px 0px var(--fgcolor);
 	}
 
 	.container form {
 		-webkit-justify-content: flex-start; /* mobile navigation at top */
 		left: 0px;
 	}
-
+/*
 	.container form {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
@@ -686,40 +693,39 @@ a.buttondead:hover {
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
-	}
+	}*/
 	
 	.container form input {
-		margin: 88vh 0 0 13.8vw;
-		/*margin: 10vh -47.5vw 0 0; /* distance between buttons horizontally */
+		margin: 0 0 20vh 0;
 	}
 	
 	.container form input:before {
-		width: 5vw;		/* size of cubes */
-		height: 5vw;
-		border: 2px solid var(--fgcolor);
+		width: 8vw;		/* size of cubes */
+		height: 20vh;
+		border: 0px solid var(--fgcolor);
 	}
 	
 	.container form input:checked:before {
-		width: 5.5vw;		/* active cube style */
-		height: 5.5vw;
-		border: 2px solid var(--hlcolor);
+		width: 8vw;		/* active cube style */
+		height: 20vh;
+		border: 0px solid var(--hlcolor);
 		background-color: var(--hlcolor);
 	}
 	
 	.container form input:after {
-		display: none;
+		display: none; /* desktop nav text */
 	}
 
-	.container form input:checked:after {
+	.container form input:checked:after { /* text at top */
 		display: block;
 		position: absolute;
 		opacity: 1;
-		left: 5vw; /* distance from left, active button */
+		left: 10vw;
 		top: 10px;
 		font-size: 30px;
 		text-shadow: none;
 	}
-	
+	/*
 	.container form input:nth-of-type(1):checked ~ .labels label {
 		-webkit-transform: translateX(-0%);
 		transform: translateX(-0%);
@@ -743,7 +749,7 @@ a.buttondead:hover {
 	.container form input:nth-of-type(5):checked ~ .labels label {
 		-webkit-transform: translateX(-400%);
 		transform: translateXS(-400%);
-	}
+	}*/
 	
 	.devicon {
 		margin: 1px;

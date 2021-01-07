@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="theme-light">
+<head>
+	<title>Skeleton++ - Sample</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="image/x-icon" href="https://utahmcentire.github.io/assets/favicon.ico" />
+		<link rel="stylesheet" href="spp.css">
+		
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+		<script src="https://utahmcentire.github.io/assets/script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+		$(function() {
+			$('input[name=headImpFiles]').on('click init-headImpBox', function() {
+				$('#headImpFilesBox').toggle($('#showheadImpFilesBox').prop('checked'));
+			}).trigger('init-headImpBox');
+		});
+		$(function() {
+			$('input[name=hasFuncs]').on('click init-funcsBox', function() {
+				$('#funcsBox').toggle($('#showfuncsBox').prop('checked'));
+			}).trigger('init-funcsBox');
+		});
+		function clearThis(target){
+			target = document.getElementById(target);
+			target.value = "";
+		}
+
+		</script>	
+</head>
+
+<body>
+<div class="colorpicker">
+	<a id="switch" onclick="toggleTheme()">
+		<div class="stylebutton"></div>
+	</a>
+</div>
+
+<h3><a href="#" onclick="goBack()" class="button backbutton">
+	<bld>&#5130; back</bld>
+</a></h3>
+
+
+<div class="container">
+
+	<form <!--action="done.php" method="POST" onkeydown="return event.key != 'Enter';"-->>
+	<div class="labels">
+		<label for="Slide1" id="Slide1" class="Slide">
+		<div class="content">
+			<center><h3>Skeleton++ Online is still under construction.</h3>
+			<h4>You can see the Github page for the working command line version <a href = "https://github.com/UtahMcEntire/skeletonplusplus"><u>here</u></a> though!</h4>
+			<hr>
+			
+			<div id="spp">
+				<pre>        __           __         __                                   </pre>
+				<pre>  _____|  | __ ____ |  |  _____/  |_  ____  ____      __       __    </pre>
+				<pre> /  ___/  |/ // __ \|  |_/ __ \   __\/    \|    \  __|  |_____|  |___</pre>
+				<pre> \___ \|    <\  ___/|  |\  ___/|  | (  <>  )  |  \/__    __/__    __/</pre>
+				<pre> /_____>__|_ \\_____>___/\_____>__|  \____/|__|  /   |__|     |__|   </pre>
+				<pre>============\/=================================\/============ONLINE==</pre><br>
+			</div></center>
+			<h4>The following is some sample output created with the command line version of Skeleton++. It's a tool meant to make starting
+			a new project less daunting for those of us who prefer to use editors such as Notepad++ or Atom instead of Visual Studio. It 
+			simply sets up the repetitive/time consuming stuff and allows you to get right into working on the implementation of your projects.</h4>
+			
+			<p><strong>Driver:</strong><br>
+				<iframe src="example.cpp.txt" height="650" width="100%" style="border:1px solid black;"></iframe>
+			</p>
+			<p><strong>Implementation:</strong><br>
+				<iframe src="exClass.cpp.txt" height="650" width="100%" style="border:1px solid black;"></iframe>
+			</p>
+			<p><strong>Header:</strong><br>
+				<iframe src="exClass.h.txt" height="650" width="100%" style="border:1px solid black;"></iframe>
+			</p>
+		</div>
+	</label>
+	</form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+// LAB2 BY Utah McEntire, CSCI 3080-001, Due: 05/05/2020
+// PROGRAM ID: example.cpp / Coin Counter
+// AUTHOR: Utah McEntire
+// INSTALLATION: MTSU
+// REMARKS: This is a short description
+
+#include "exClass.h"
+#include <iostream>
+#include <fstream>
+#include <cassert>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+#include <cstddef> //For NULL
+using namespace std;
+
+//Default constructor
+exClass::exClass(){
+	
+}
+
+void exClass::insert(int &sum, string &name, float total){
+	
+}
+
+
+int exClass::calculate(int mySum, float &myTotal){
+	
+	return average;
+}
+
+
+void exClass::finish(){
+	
+//Destructor
+exClass::~exClass(){
+	
+}
