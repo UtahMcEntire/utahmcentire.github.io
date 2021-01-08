@@ -112,6 +112,10 @@ ol, ul {
 	list-style-position: inside;
 }
 
+p {
+	margin: 30px 0 30px 0;
+}
+
 strong {
 	font-weight: bold;
 	color: var(--hlcolor);
@@ -240,8 +244,10 @@ a.backbutton {
 }
 
 .fa {
-	margin: 10px;
-	padding: 5px;
+	margin: 0 10px 0 0;
+	padding: 0px;
+	width: 20px;
+	text-align: center;
 }
 
 .forms input {
