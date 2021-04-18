@@ -7,6 +7,7 @@
 	--gdcolor: #e2e3e4;
 	--cbcolor: #f9f9f9;
 	--accolor: #ff4500;
+	--stcolor: #ff4500;
 	--bshadow: -1px 1px 0px var(--fgcolor),
 				-2px 2px 0px var(--fgcolor),
 				-3px 3px 0px var(--fgcolor),
@@ -27,6 +28,7 @@
 	--gdcolor: #282828;
 	--cbcolor: #252525;
 	--accolor: #212121;
+	--stcolor: #FFD700;
 	--bshadow: -1px 1px 0px var(--fgcolor),
 				-2px 2px 0px var(--fgcolor),
 				-3px 3px 0px var(--fgcolor),
@@ -117,7 +119,7 @@ hlt {
 
 strong {
 	font-weight:bold;
-	color: var(--accolor);
+	color: var(--stcolor);
 }
 
 table {
