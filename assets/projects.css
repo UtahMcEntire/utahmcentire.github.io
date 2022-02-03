@@ -133,7 +133,7 @@ table tr td {
 	background-color: var(--fgcolor);
 	color: var(--bgcolor);
 	border-radius: 4px;
-	padding: 5px 5px 0px 5px;
+	padding: 2px 5px 3px 5px;
 	margin: 2px 2px 2px 0px;
 	text-transform: uppercase;
 }
@@ -222,7 +222,7 @@ a.buttondead:hover {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 	position: absolute;
-	top: 6vh;
+	top: 7.5vh;
 	left: 0;
 	text-align: center;
 	width: 100vw;
@@ -246,7 +246,7 @@ a.buttondead:hover {
 	margin: 1vw;
 	text-shadow: none;
 	text-align: left;
-	border: solid 0.25px var(--fgcolor);
+	border: solid 2px var(--fgcolor);
 	box-shadow: var(--bshadow);
 	background: var(--cbcolor);
 	vertical-align: top;
@@ -281,12 +281,13 @@ a.buttondead:hover {
 	position: fixed;
 	display: table;
 	background: var(--fgcolor);
-	right: -45px;
-	top: -45px;
+	right: -55px;
+	top: -55px;
 	transform: rotate(45deg);
 	width: 90px;
 	height: 90px;
 	z-index: 1001;
+	opacity: 0.75;
 }
 
 .stylebutton:hover {
@@ -295,6 +296,7 @@ a.buttondead:hover {
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     transition: 0.2s all ease;
+	opacity: 1;
 }
 
 @keyframes animatevl {

@@ -4,7 +4,7 @@
 	--fgcolor: #333333;
 	--grcolor: #999999;
 	--hlcolor: #ff4500;
-	--gdcolor: #e2e3e4;
+	--gdcolor: #cbcccd;
 	--cbcolor: #f9f9f9;
 	--accolor: #ff4500;
 	--stcolor: #ff4500;
@@ -24,11 +24,11 @@
 	--bgcolor: #212121;
 	--fgcolor: #f0f0f0;
 	--grcolor: #444444;
-	--hlcolor: #FFD700;
-	--gdcolor: #282828;
+	--hlcolor: #ff4500;
+	--gdcolor: #3d3d3d;
 	--cbcolor: #252525;
-	--accolor: #212121;
-	--stcolor: #FFD700;
+	--accolor: #ff4500;
+	--stcolor: #ff4500;
 	--bshadow: -1px 1px 0px var(--fgcolor),
 				-2px 2px 0px var(--fgcolor),
 				-3px 3px 0px var(--fgcolor),
@@ -467,10 +467,11 @@ a.buttondead:hover {
 .stylebutton{
 	box-shadow: 0 0 20px var(--fgcolor);
 	position: fixed;
+	opacity: 0.75;
 	display: table;
 	background: var(--fgcolor);
-	right: -45px;
-	top: -45px;
+	right: -55px;
+	top: -55px;
 	transform: rotate(45deg);
 	width: 90px;
 	height: 90px;
@@ -483,6 +484,7 @@ a.buttondead:hover {
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     transition: 0.2s all ease;
+	opacity: 1;
 }
 
 @keyframes animatevl {
@@ -657,9 +659,9 @@ a.buttondead:hover {
 	
 	.content {
 		width: 85vw;
-		min-height: 75vh;
+		height: 85vh;
 		padding: 10px;
-		margin-left: 5vw;
+		margin-left: 10vw;
 		box-shadow: 
 				-1px 1px 0px var(--fgcolor),
 				-2px 2px 0px var(--fgcolor),
@@ -702,15 +704,17 @@ a.buttondead:hover {
 	}
 	
 	.container form input:before {
-		width: 8vw;		/* size of cubes */
-		height: 20vh;
-		border: 0px solid var(--fgcolor);
+		width: 6vw;		/* size of cubes */
+		height: calc(20vh - 2px);
+		border-width: 1px 0px 1px 0px;
+		border-style: solid;
+		border-color: var(--bgcolor);
 	}
 	
 	.container form input:checked:before {
 		width: 8vw;		/* active cube style */
-		height: 20vh;
-		border: 0px solid var(--hlcolor);
+		height: calc(20vh - 2px);
+		border: 0px 0px 0px 0px solid var(--bgcolor);
 		background-color: var(--hlcolor);
 	}
 	
@@ -722,10 +726,20 @@ a.buttondead:hover {
 		display: block;
 		position: absolute;
 		opacity: 1;
-		left: 10vw;
-		top: 10px;
+		left: 12vw;
+		top: 2vw;
 		font-size: 30px;
 		text-shadow: none;
+		background-color: var(--bgcolor);
+		padding: 5px 0px 0px 5px;
+		line-height: 0.90;
+		border: 2px solid var(--fgcolor);
+		box-shadow: 
+				-1px 1px 0px var(--fgcolor),
+				-2px 2px 0px var(--fgcolor),
+				-3px 3px 0px var(--fgcolor),
+				-4px 4px 0px var(--fgcolor),
+				-5px 5px 0px var(--fgcolor);
 	}
 	/*
 	.container form input:nth-of-type(1):checked ~ .labels label {
@@ -763,13 +777,14 @@ a.buttondead:hover {
 		padding: 3px;
 	}
 	
-	.horiz {
+	.horiz {	/* mobile horizontal bar at top (opacity 0 to hide) */
+		opacity: 0;
 		border-top: solid 2px var(--fgcolor);
 		box-shadow: 0 0 6px var(--fgcolor);
 		top: 50px;
 		left: 5vw;
 		position: absolute;
-		width: 90vw;
+		width: 100vw;
 	}
 	
 	.icontable {
@@ -790,6 +805,18 @@ a.buttondead:hover {
 		display: none;
 	}
 	
+	.stylebutton{
+		box-shadow: 0 0 20px var(--fgcolor);
+		position: fixed;
+		display: table;
+		background: var(--fgcolor);
+		right: -55px;
+		top: -55px;
+		transform: rotate(45deg);
+		width: 90px;
+		height: 90px;
+		z-index: 1001;
+	}
 	.vl {
 		opacity: 0;
 	}
