@@ -17,7 +17,7 @@
 				-7px 7px 0px var(--fgcolor),
 				-8px 8px 0px var(--fgcolor),
 				-9px 9px 0px var(--fgcolor),
-				-40px 40px 30px var(--grcolor);
+				-20px 20px 10px var(--grcolor);
 }
 
 .theme-dark {
@@ -29,12 +29,12 @@
 	--cbcolor: #252525;
 	--accolor: #ff4500;
 	--stcolor: #ff4500;
-	--bshadow: -1px 1px 0px var(--fgcolor),
-				-2px 2px 0px var(--fgcolor),
-				-3px 3px 0px var(--fgcolor),
-				-4px 4px 0px var(--fgcolor),
-				-5px 5px 0px var(--fgcolor),
-				-6px 6px 0px var(--fgcolor),
+	--bshadow: -1px 1px 0px var(--bgcolor),
+				-2px 2px 0px var(--bgcolor),
+				-3px 3px 0px var(--bgcolor),
+				-4px 4px 0px var(--bgcolor),
+				-5px 5px 0px var(--bgcolor),
+				-6px 6px 0px var(--bgcolor),
 				-7px 7px 0px var(--fgcolor),
 				-8px 8px 0px var(--fgcolor),
 				-9px 9px 0px var(--fgcolor);
@@ -56,7 +56,7 @@ body {
 	background-color: var(--bgcolor);
 	background-size: 20px 20px; /* grid background cube sizes */
 	background-image: /* grid background color/layout */
-		linear-gradient(to right, var(--gdcolor) 1px, transparent 1px),
+		linear-gradient(to right, var(--gdcolor) 0px, transparent 0px),
 		linear-gradient(to bottom, var(--gdcolor) 1px, transparent 1px);
 	overflow-x: hidden;
 	font-family: "Overpass Mono", monospace;
@@ -231,13 +231,21 @@ a.buttondead:hover {
 	height: 0;
 	width: 0;
 	/*position: fixed; /* (delete) scrolling? */
-	margin: 21px 50px; /* distance between buttons vertically */
+	margin: 28px 50px; /* distance between buttons vertically */
 	z-index: 1000;
-	/*animation: navAnimation 2s ease;
+	animation: cubeAnimation 1.5s ease;
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
-	transition: all 0.25s linear;
-	-webkit-transition: all 0.25s linear;*/
+}
+
+@keyframes cubeAnimation {
+	0% {
+		margin: 20px 50px;
+	}
+	100% {
+		margin: 28px 50px;
+	}
+	
 }
 
 .container form input:checked {
@@ -251,38 +259,46 @@ a.buttondead:hover {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
-	border: 7px solid var(--fgcolor);
+	border: 4px solid var(--fgcolor);
 	border-radius: 0;
+	box-shadow: var(--bshadow);
 	cursor: default;
 	transition: all 0.25s linear;
 	-webkit-transition: all 0.25s linear;
-	background-color: var(--fgcolor); /* fill color of inactive cube */
+	background-color: var(--bgcolor); /* fill color of inactive cube */
 }
 
 .container form input:checked:before {
-	background-color: var(--accolor); /* fill color of active cube */
+	background-color: var(--bgcolor); /* fill color of active cube */
+	content: "X";
+	color: var(--fgcolor);
+	font-size: 30px;
+	text-align: center;
+	line-height: 1.2;
 }
 
 .container form input:after {
 	font-family: "Overpass Mono", monospace;
 	content: "" attr(title) "";
 	position: relative;
-	left: 55px;			/* distance from left, inactive buttons */
+	left: 50px;			/* distance from left, inactive buttons */
 	color: transparent;		/* color of all button text */
 	text-shadow: 0 0 3px var(--fgcolor); /* use shadow instead */
-	opacity: 0.75;
 	padding-top: 3px;
 	font-size: 35px;	/* font size of all buttons */
 	display: block;
 	min-width: 80px;
 	transition: all 0.25s linear;
 	-webkit-transition: all 0.25s linear;
+	animation: navAnimation 3s ease;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
 }
 
 .container form input:checked:after {
 	opacity: 1;
 	color: var(--fgcolor);
-	left: 65px; /* distance from left, active button */
+	left: 60px; /* distance from left, active button */
 	text-shadow: 0 0 5px var(--bgcolor);
 }
 
@@ -318,7 +334,7 @@ a.buttondead:hover {
 .container form .labels {
 	opacity: 0;
 	animation: fadeInAnimation ease 2s;
-	animation-delay: 0.5s;
+	animation-delay: 0.75s;
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 	position: absolute;
@@ -369,7 +385,7 @@ a.buttondead:hover {
 	padding: 3vw;
 	margin-left: 12vw;
 	text-shadow: none;
-	border: solid 2px var(--fgcolor);
+	border: 3px solid var(--fgcolor);
 	border-radius: 0px;
 	background: var(--cbcolor);
 	box-shadow: var(--bshadow);
@@ -433,6 +449,16 @@ a.buttondead:hover {
 	animation-play-state: paused;
 }
 
+#logonumber {
+	font-size: 12px;
+	color: var(--fgcolor);
+	position: absolute;
+	bottom: 1px;
+	right: 9px;
+	font-weight: bold;
+	opacity: 0.85;
+}
+
 .logo:hover {
 	animation-play-state: running;
 }
@@ -450,52 +476,74 @@ a.buttondead:hover {
 }
 
 .vl {
-	height: 70vh;
+	height: 200vh;
 	position: fixed;
-	border-left: 6px solid var(--fgcolor);
+	border-left: 1px solid var(--accolor);
 	left: 23vw;
-    box-shadow: 0 0 5px var(--fgcolor);
-	opacity: 1;
+	top: -50vh;
+    box-shadow: 0 0 0px var(--accolor);
+	opacity: 0.4;
 	animation-name: animatevl;
     animation-iteration-count: 1;
     animation-timing-function: ease;
-    animation-duration: 1s;
+	animation-delay: 1s;
+    animation-duration: 2s;
 	animation-fill-mode: both;
-	z-index: 1001;
+	z-index: 9;
+}
+
+.styleicon {
+	display:none;
 }
 
 .stylebutton{
-	box-shadow: 0 0 20px var(--fgcolor);
+	padding: 5px 0px 0px 5px;
 	position: fixed;
-	opacity: 0.75;
+	border: 3px solid var(--fgcolor);
 	display: table;
-	background: var(--fgcolor);
-	right: -55px;
-	top: -55px;
-	transform: rotate(45deg);
-	width: 90px;
-	height: 90px;
+	background: var(--bgcolor);
+	right: 15px;
+	top: 15px;
+	width: 75px;
 	z-index: 1001;
+	opacity: 0.5;
+	cursor: pointer;
+	box-shadow: -1px 1px 0px var(--bgcolor),
+				-2px 2px 0px var(--bgcolor),
+				-3px 3px 0px var(--fgcolor),
+				-4px 4px 0px var(--fgcolor),
+				-5px 5px 0px var(--fgcolor);
 }
 
 .stylebutton:hover {
-    box-shadow: 0 0 100px var(--fgcolor);
 	-webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     transition: 0.2s all ease;
-	opacity: 1;
+	opacity: 0.8;
+}
+
+.styleicon {
+	display: none;
 }
 
 @keyframes animatevl {
     0% {
-		height: 0%;
+		height: 0vh;
 	}
     100% {
-		height: 70vh;
+		height: 150vh;
 	}
 }
 
+@keyframes navAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 @keyframes buttonShift { 
 	0% { 
 		box-shadow: 0 0 0 var(--hlcolor); 
@@ -507,82 +555,82 @@ a.buttondead:hover {
 
 @keyframes logoRainbow { 
 	0% {
-		border: 5px solid var(--fgcolor);
-		box-shadow: -8px 8px 0px -3.5px var(--bgcolor),
-					-8px 8px green,
-					-16px 16px 0px -3.5px var(--bgcolor),
-					-16px 16px purple,
-					-24px 24px 0px -3.5px var(--bgcolor),
-					-24px 24px crimson,
-					-32px 32px 0px -3.5px var(--bgcolor),
-					-32px 32px darkorange,
-					-40px 40px 0px -3.5px var(--bgcolor),
-					-40px 40px gold;
-	}
-	20% {
-		border: 5px solid var(--fgcolor);
-		box-shadow: -8px 8px 0px -3.5px var(--bgcolor),
-					-8px 8px gold,
-					-16px 16px 0px -3.5px var(--bgcolor),
-					-16px 16px green,
-					-24px 24px 0px -3.5px var(--bgcolor),
-					-24px 24px purple,
-					-32px 32px 0px -3.5px var(--bgcolor),
-					-32px 32px crimson,
-					-40px 40px 0px -3.5px var(--bgcolor),
-					-40px 40px darkorange;
-	}
-	40% {
-		border: 5px solid var(--fgcolor);
-		box-shadow: -8px 8px 0px -3.5px var(--bgcolor),
-					-8px 8px darkorange,
-					-16px 16px 0px -3.5px var(--bgcolor),
-					-16px 16px gold,
-					-24px 24px 0px -3.5px var(--bgcolor),
-					-24px 24px green,
-					-32px 32px 0px -3.5px var(--bgcolor),
-					-32px 32px purple,
-					-40px 40px 0px -3.5px var(--bgcolor),
-					-40px 40px crimson;
-	}
-	60% {
-		border: 5px solid var(--fgcolor);
-		box-shadow: -8px 8px 0px -3.5px var(--bgcolor),
-					-8px 8px crimson,
-					-16px 16px 0px -3.5px var(--bgcolor),
-					-16px 16px darkorange,
-					-24px 24px 0px -3.5px var(--bgcolor),
-					-24px 24px gold,
-					-32px 32px 0px -3.5px var(--bgcolor),
-					-32px 32px green,
-					-40px 40px 0px -3.5px var(--bgcolor),
-					-40px 40px purple;
-	}
-	80% {
-		border: 5px solid var(--fgcolor);
-		box-shadow: -8px 8px 0px -3.5px var(--bgcolor),
-					-8px 8px purple,
-					-16px 16px 0px -3.5px var(--bgcolor),
-					-16px 16px crimson,
+		border: 6px solid var(--fgcolor);
+		box-shadow: -6px 6px 0px -3.5px var(--bgcolor),
+					-6px 6px green,
+					-12px 12px 0px -3.5px var(--bgcolor),
+					-12px 12px purple,
+					-18px 18px 0px -3.5px var(--bgcolor),
+					-18px 18px crimson,
 					-24px 24px 0px -3.5px var(--bgcolor),
 					-24px 24px darkorange,
-					-32px 32px 0px -3.5px var(--bgcolor),
-					-32px 32px gold,
-					-40px 40px 0px -3.5px var(--bgcolor),
-					-40px 40px green;
+					-30px 30px 0px -3.5px var(--bgcolor),
+					-30px 30px gold;
 	}
-	100% {
-		border: 5px solid var(--fgcolor);
-		box-shadow: -8px 8px 0px -3.5px var(--bgcolor),
-					-8px 8px green,
-					-16px 16px 0px -3.5px var(--bgcolor),
-					-16px 16px purple,
+	20% {
+		border: 6px solid var(--fgcolor);
+		box-shadow: -6px 6px 0px -3.5px var(--bgcolor),
+					-6px 6px gold,
+					-12px 12px 0px -3.5px var(--bgcolor),
+					-12px 12px green,
+					-18px 18px 0px -3.5px var(--bgcolor),
+					-18px 18px purple,
 					-24px 24px 0px -3.5px var(--bgcolor),
 					-24px 24px crimson,
-					-32px 32px 0px -3.5px var(--bgcolor),
-					-32px 32px darkorange,
-					-40px 40px 0px -3.5px var(--bgcolor),
-					-40px 40px gold;
+					-30px 30px 0px -3.5px var(--bgcolor),
+					-30px 30px darkorange;
+	}
+	40% {
+		border: 6px solid var(--fgcolor);
+		box-shadow: -6px 6px 0px -3.5px var(--bgcolor),
+					-6px 6px darkorange,
+					-12px 12px 0px -3.5px var(--bgcolor),
+					-12px 12px gold,
+					-18px 18px 0px -3.5px var(--bgcolor),
+					-18px 18px green,
+					-24px 24px 0px -3.5px var(--bgcolor),
+					-24px 24px purple,
+					-30px 30px 0px -3.5px var(--bgcolor),
+					-30px 30px crimson;
+	}
+	60% {
+		border: 6px solid var(--fgcolor);
+		box-shadow: -6px 6px 0px -3.5px var(--bgcolor),
+					-6px 6px crimson,
+					-12px 12px 0px -3.5px var(--bgcolor),
+					-12px 12px darkorange,
+					-18px 18px 0px -3.5px var(--bgcolor),
+					-18px 18px gold,
+					-24px 24px 0px -3.5px var(--bgcolor),
+					-24px 24px green,
+					-30px 30px 0px -3.5px var(--bgcolor),
+					-30px 30px purple;
+	}
+	80% {
+		border: 6px solid var(--fgcolor);
+		box-shadow: -6px 6px 0px -3.5px var(--bgcolor),
+					-6px 6px purple,
+					-12px 12px 0px -3.5px var(--bgcolor),
+					-12px 12px crimson,
+					-18px 18px 0px -3.5px var(--bgcolor),
+					-18px 18px darkorange,
+					-24px 24px 0px -3.5px var(--bgcolor),
+					-24px 24px gold,
+					-30px 30px 0px -3.5px var(--bgcolor),
+					-30px 30px green;
+	}
+	100% {
+		border: 6px solid var(--fgcolor);
+		box-shadow: -6px 6px 0px -3.5px var(--bgcolor),
+					-6px 6px green,
+					-12px 12px 0px -3.5px var(--bgcolor),
+					-12px 12px purple,
+					-18px 18px 0px -3.5px var(--bgcolor),
+					-18px 18px crimson,
+					-24px 24px 0px -3.5px var(--bgcolor),
+					-24px 24px darkorange,
+					-30px 30px 0px -3.5px var(--bgcolor),
+					-30px 30px gold;
 	}
 }
 
@@ -662,8 +710,7 @@ a.buttondead:hover {
 		height: 85vh;
 		padding: 10px;
 		margin-left: 10vw;
-		box-shadow: 
-				-1px 1px 0px var(--fgcolor),
+		box-shadow: -1px 1px 0px var(--fgcolor),
 				-2px 2px 0px var(--fgcolor),
 				-3px 3px 0px var(--fgcolor),
 				-4px 4px 0px var(--fgcolor),
@@ -674,7 +721,8 @@ a.buttondead:hover {
 		-webkit-justify-content: flex-start; /* mobile navigation at top */
 		left: 0px;
 	}
-/*
+	
+	/*
 	.container form {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
@@ -700,22 +748,57 @@ a.buttondead:hover {
 	}*/
 	
 	.container form input {
-		margin: 0 0 20vh 0;
+		height: 0;
+		width: 0;
+		/*position: fixed; /* (delete) scrolling? */
+		margin: 0px 0px; /* distance between buttons vertically */
+		z-index: 1000;
+		animation: mobileCubeAnimation 1.5s ease;
+		animation-iteration-count: 1; 
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes mobileCubeAnimation {
+		0% {
+			margin: 0vh 0px;
+		}
+		100% {
+			margin: 9.8vh 0px;
+		}
 	}
 	
 	.container form input:before {
-		width: 6vw;		/* size of cubes */
+		/*width: 6vw;		/* size of cubes 
+		left: 0px;
 		height: calc(20vh - 2px);
 		border-width: 1px 0px 1px 0px;
 		border-style: solid;
-		border-color: var(--bgcolor);
+		border-color: var(--bgcolor);*/
+		margin: -60px 0px; /* whole thing distance from top*/
+		
+		content: "";
+		position: absolute;
+		display: inline-block;
+		width: 6vw;
+		height: calc(18vh - 2px);
+		border: 3px solid var(--fgcolor);
+		border-radius: 0 3px 3px 0;
+		box-shadow: -1px 1px 0px var(--fgcolor),
+					-3px 3px 0px var(--fgcolor),
+					-5px 5px 0px var(--fgcolor);
+		left: 0px;
+		cursor: default;
+		transition: all 0.25s linear;
+		-webkit-transition: all 0.25s linear;
+		background-color: var(--bgcolor); /* fill color of inactive cube */
 	}
 	
 	.container form input:checked:before {
 		width: 8vw;		/* active cube style */
-		height: calc(20vh - 2px);
-		border: 0px 0px 0px 0px solid var(--bgcolor);
-		background-color: var(--hlcolor);
+		left: 0vw;
+		height: calc(18vh - 2px);
+		border: 1px solid var(--fgcolor);
+		background-color: var(--fgcolor);
 	}
 	
 	.container form input:after {
@@ -723,25 +806,27 @@ a.buttondead:hover {
 	}
 
 	.container form input:checked:after { /* text at top */
+		z-index: -1;
 		display: block;
 		position: absolute;
 		opacity: 1;
 		left: 12vw;
-		top: 2vw;
+		top: 1vw;
 		font-size: 30px;
 		text-shadow: none;
 		background-color: var(--bgcolor);
 		padding: 5px 0px 0px 5px;
 		line-height: 0.90;
-		border: 2px solid var(--fgcolor);
+		border: 3px solid var(--fgcolor);
 		box-shadow: 
-				-1px 1px 0px var(--fgcolor),
-				-2px 2px 0px var(--fgcolor),
+				-1px 1px 0px var(--bgcolor),
+				-2px 2px 0px var(--bgcolor),
 				-3px 3px 0px var(--fgcolor),
 				-4px 4px 0px var(--fgcolor),
 				-5px 5px 0px var(--fgcolor);
 	}
-	/*
+	
+	/* This code makes the page slide horizontally instead of vertically (must change slide transform)
 	.container form input:nth-of-type(1):checked ~ .labels label {
 		-webkit-transform: translateX(-0%);
 		transform: translateX(-0%);
@@ -778,11 +863,11 @@ a.buttondead:hover {
 	}
 	
 	.horiz {	/* mobile horizontal bar at top (opacity 0 to hide) */
-		opacity: 0;
-		border-top: solid 2px var(--fgcolor);
-		box-shadow: 0 0 6px var(--fgcolor);
-		top: 50px;
-		left: 5vw;
+		opacity: 0.3;
+		border-left: 1px solid var(--accolor);
+		box-shadow: 0 0 0px var(--fgcolor);
+		left: 25vw;
+		height: 100vh;
 		position: absolute;
 		width: 100vw;
 	}
@@ -806,17 +891,30 @@ a.buttondead:hover {
 	}
 	
 	.stylebutton{
-		box-shadow: 0 0 20px var(--fgcolor);
-		position: fixed;
-		display: table;
-		background: var(--fgcolor);
-		right: -55px;
-		top: -55px;
-		transform: rotate(45deg);
-		width: 90px;
-		height: 90px;
-		z-index: 1001;
+		display: none;
 	}
+	
+	.styleicon{
+		opacity: 0.1;
+		padding: 5px 0px 0px 5px;
+		position: fixed;
+		border: 3px solid var(--fgcolor);
+		display: table;
+		background: var(--bgcolor);
+		right: 1vw;
+		top: 1vw;
+		width: 27px;
+		height: 27px;
+		line-height: 1.5;
+		z-index: 1001;
+		color: var(--fgcolor);
+		box-shadow: -1px 1px 0px var(--bgcolor),
+					-2px 2px 0px var(--bgcolor),
+					-3px 3px 0px var(--fgcolor),
+					-4px 4px 0px var(--fgcolor),
+					-5px 5px 0px var(--fgcolor);
+	}
+	
 	.vl {
 		opacity: 0;
 	}

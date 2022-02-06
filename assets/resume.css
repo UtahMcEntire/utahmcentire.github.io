@@ -56,7 +56,7 @@ body {
 	background-color: var(--bgcolor);
 	background-size: 20px 20px;
 	background-image:
-		linear-gradient(to right, var(--gdcolor) 1px, transparent 1px),
+		linear-gradient(to right, var(--gdcolor) 0px, transparent 0px),
 		linear-gradient(to bottom, var(--gdcolor) 1px, transparent 1px);
 	overflow-x: hidden;
 	font-family: "Overpass Mono", monospace;
@@ -271,26 +271,38 @@ a.backbutton {
 }
 
 .stylebutton{
-	box-shadow: 0 0 20px var(--fgcolor);
+	padding: 5px 0px 0px 5px;
 	position: fixed;
+	border: 3px solid var(--fgcolor);
 	display: table;
-	background: var(--fgcolor);
-	right: -55px;
-	top: -55px;
-	transform: rotate(45deg);
-	width: 90px;
-	height: 90px;
+	background: var(--bgcolor);
+	right: 15px;
+	top: 15px;
+	width: 75px;
 	z-index: 1001;
-	opacity: 0.75;
+	opacity: 0.5;
+	cursor: pointer;
+	box-shadow: -1px 1px 0px var(--bgcolor),
+				-2px 2px 0px var(--bgcolor),
+				-3px 3px 0px var(--fgcolor),
+				-4px 4px 0px var(--fgcolor),
+				-5px 5px 0px var(--fgcolor);
+}
+
+.stylebutton p {
+	margin: 0;
 }
 
 .stylebutton:hover {
-    box-shadow: 0 0 100px var(--fgcolor);
-	-webkit-transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
     -moz-transition: 0.2s all ease;
     -o-transition: 0.2s all ease;
     transition: 0.2s all ease;
-	opacity: 1;
+	opacity: 0.8;
+}
+
+.styleicon {
+	display: none;
 }
 
 @keyframes animatevl {
@@ -433,14 +445,28 @@ a.backbutton {
 		display: none;
 	}
 	
-	.wstylebutton {
-		box-shadow: none;
-		background-color: transparent;
-		background-image: url("sun.svg");
-		background-size: 100% 100%;
-		right: 2vh;
-		top: 2vh;
-		width: 4vh;
-		height: 4vh;
+	.stylebutton{
+		display: none;
+	}
+	
+	.styleicon{
+		opacity: 0.1;
+		padding: 5px 0px 0px 5px;
+		position: fixed;
+		border: 3px solid var(--fgcolor);
+		display: table;
+		background: var(--bgcolor);
+		right: 1vw;
+		top: 1vw;
+		width: 27px;
+		height: 27px;
+		line-height: 1.5;
+		z-index: 1001;
+		color: var(--fgcolor);
+		box-shadow: -1px 1px 0px var(--bgcolor),
+					-2px 2px 0px var(--bgcolor),
+					-3px 3px 0px var(--fgcolor),
+					-4px 4px 0px var(--fgcolor),
+					-5px 5px 0px var(--fgcolor);
 	}
 }
